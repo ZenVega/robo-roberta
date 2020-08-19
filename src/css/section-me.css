@@ -1,0 +1,21 @@
+section#me{
+  flex-direction: row;
+}
+
+#me-robo-image{
+  flex:1;
+}
+
+#me-image2{
+  flex:1;
+  transform: scaleX(-1) /* rotate(45deg) */;
+  width: 20vw;
+}
+
+@media screen and (max-width: 850px){
+
+}
+
+@media screen and (max-width: 350px){
+
+}

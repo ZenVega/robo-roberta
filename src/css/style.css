@@ -1,0 +1,71 @@
+
+@font-face {
+  font-family:"disketMonoRegular";
+  src: url("../../src/data/fontDisketRostype/Disket-Mono-Regular.ttf")  format('truetype');
+}
+@font-face {
+  font-family:"disketMonoBold";
+  src: url("../../src/data/fontDisketRostype/Disket-Mono-Bold.ttf")  format('truetype');
+}
+
+html{
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar {
+  z-index: 3;
+  display: flex;
+  width: 100vw;
+  height: 60px;
+  transition: 300ms;
+  justify-content: center;
+}
+
+.nav-link{
+  margin: 20px;
+  font-family: "disketMonoRegular";
+}
+.nav-link:hover{
+  font-family: "disketMonoBold";
+}
+
+#section-container {
+  overflow: hidden;
+}
+
+
+section {
+  display: flex;
+}
+
+
+/* SECTION HOME */
+
+
+
+
+
+@media screen and (max-width: 850px){
+  
+  .navbar {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 350px){
+
+}
