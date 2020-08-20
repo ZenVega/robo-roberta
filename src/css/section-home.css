@@ -1,11 +1,15 @@
 section#home{
   flex-direction: row-reverse;
   align-items: flex-start;
+  width: 100vw;
+  background-color: rgb(253, 224, 59);
+
 }
 
-h1{
+section#home h1{
   font-family: disketMonoBold;
   font-size: 5vw;
+  margin-bottom:22vh;
 }
 
 #home-header{
@@ -14,7 +18,7 @@ h1{
   display: flex;
   height: 100%;
   flex-direction: column;
-  gap: 22vh;
+
 }
 
 #home-subheader{
@@ -26,7 +30,8 @@ h1{
 }
 
 #home-image{
-  flex:2
+  flex:2;
+  width: 50%;
 }
 
 @media screen and (max-width: 850px){

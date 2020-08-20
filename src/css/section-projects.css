@@ -1,0 +1,35 @@
+section#projects{
+flex-direction: row;
+
+}
+#projects-left-side{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 5vw;
+}
+  
+#projects-header{
+margin-left: 10vw;
+}
+
+#projects-robo-image{
+  height: 30vw;
+  transform:rotate(90deg);
+}
+
+#projects-cover-image{
+  flex:1;
+  width: 50%;
+  padding: 5vw;
+}
+
+@media screen and (max-width: 850px){
+
+}
+
+@media screen and (max-width: 350px){
+
+}

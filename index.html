@@ -28,8 +28,14 @@
 
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/burger.css">
+
   <link rel="stylesheet" href="src/css/section-home.css">
   <link rel="stylesheet" href="src/css/section-me.css">
+  <link rel="stylesheet" href="src/css/section-books.css">
+  <link rel="stylesheet" href="src/css/section-projects.css">
+  <link rel="stylesheet" href="src/css/section-education.css">
+  <link rel="stylesheet" href="src/css/section-contact.css">
+
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
@@ -47,8 +53,6 @@
         <a class="nav-link" href="#projects">Projekte</a>
         <a class="nav-link" href="#education">Fortbildung</a>
         <a class="nav-link" href="#contact">Kontakt</a>
-       <!--  <a href=""><i class="fa fa-instagram nav-icon" ></i></a>
-        <a href=""><i class="fa fa-facebook-official nav-icon" aria-hidden="true"></i></a> -->
     </nav>
 
   <div id="section-container">
@@ -57,23 +61,43 @@
       <span id="home-header">
         <h1>ROBO + <br>ROBERTA</h1>
         <span id="home-subheader" >
-          <h2 >_Bücher</h2>
-          <h2 >_Workshops </h2>
-          <h2 >_Fortbildungen</h2>
+          <h2 data-aos="fade-right" data-aos-offset="350">_Bücher</h2>
+          <h2 data-aos="fade-right" data-aos-offset="350" data-aos-delay="150">_Workshops </h2>
+          <h2 data-aos="fade-right" data-aos-offset="350" data-aos-delay="300">_Fortbildungen</h2>
         </span>
       </span>
       <img id="home-image" src="src/images/section-home/R+R_Start_1.png" alt="">
     </section>
 
     <section id="me">
-      <img id="me-robo-image" src="src/images/section-me/R+R_Start_Test_1_1.jpg" alt="">
+      <div id="me-left-side">
+        <h1 id="me-header">Kreativität schlummert in jedem Menschen.
+          <br>Manchmal muss nur ein wenig an gewissen Schrauben gedreht werden, damit sich die Tore zur eigenen Schöpferkraft öffnen.
+        </h1>
+        <img id="me-robo-image" src="src/images/section-me/R+R_Start_2.png" alt="">
+      </div>
       <img id="me-image2" src="src/images/section-me/R+R_Start_Test_1_2.jpg" >
     </section>
 
     <section id="books">
+      <img src="src/images/section-books/R+R_Start_Test_2_2.jpg" alt="">
+      <div id="text-container">
+        <h1>Das sind unsere Bücker!</h1>
+        <p>Kurzer Klappentext vielleicht... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, fugiat aliquid laboriosam iste, eaque accusantium vitae, culpa recusandae quae temporibus iure ab natus nulla ipsum velit inventore minima est mollitia tempore eligendi! Doloribus eos dolor obcaecati voluptatibus perferendis consequuntur asperiores, illo, qui eum possimus vero natus, soluta optio neque quos sequi provident aut. Culpa, praesentium! Excepturi, obcaecati recusandae at dolorum reprehenderit ipsam magnam sequi eius distinctio quae velit dignissimos? Corrupti asperiores adipisci molestiae harum labore odio, eligendi dolore incidunt ea.</p>
+      </div>
     </section>
 
     <section id="projects">
+      <div id="projects-left-side">
+        <div id="projects-header">
+          <h1>Projekte</h1>
+          <h2>Für Kinder und <br> Jugendliche</h2>
+        </div>
+        <div  data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-offset="350"  id="projects-robo-image-container">
+          <img id="projects-robo-image"src="src/images/section-projects/R+R_Start_4.png" alt="">
+        </div>
+      </div>
+      <img id="projects-cover-image" src="src/images/section-projects/R+R_Start_4_2.jpg" alt="">
     </section>
 
     <section id="education" >
@@ -84,8 +108,11 @@
     
   </div>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="src/js/main.js"></script>
   <script src="src/js/burger.js"></script>
-<!--   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script> -->
+
 </body>
 </html>
