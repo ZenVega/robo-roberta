@@ -2,20 +2,23 @@ section#education{
   background-color: #A6F4DC;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 5vw;
+
 }
 
 #education-header{
-width: 45vw;
-margin-bottom: 30px;
+  margin-left: -5vw;
+  width: 45vw;
+  margin-bottom: 30px;
 }
 
 #education-text{
 width: 45vw;
+margin: 10vw 0 10vw 10vw;
 }
 
 #education-robo{
-  width: 45vw;
+  width: 35vw;
+  margin:0 5vw;
 
 }
 

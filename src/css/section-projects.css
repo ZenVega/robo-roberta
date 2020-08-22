@@ -7,7 +7,8 @@ background-color: #8E3B46;
 }
 #projects-header{
   width: 80vw;
-  margin-left: 10vw;
+  margin-left: 5vw;
+  margin-top: 5vw;
   color:white;
 }
 
@@ -20,12 +21,8 @@ background-color: #8E3B46;
   color: white;
 }
 
-#projects-robo-image-container{
-
-}
-
 #projects-robo-image{
-  height: 30vw;
+  height: 25vw;
   transform:rotate(75deg) scaleX(-1);
 }
 #projects-description{

@@ -1,6 +1,6 @@
 section#books{
 background-color: #4C86A8;
-padding: 10vw;
+padding: 5vw;
 justify-content: space-between;
 
 }
@@ -21,6 +21,7 @@ section#books img{
 section#books h1{
   color: white;
   margin-bottom: 2vw;
+  margin-left: -5vw;
 }
 
 @media screen and (max-width: 850px){

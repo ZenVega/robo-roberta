@@ -3,6 +3,7 @@ section#home{
   align-items: flex-start;
   width: 100vw;
   background-color: rgb(253, 224, 59);
+  padding-top: 4vw;
 
 }
 

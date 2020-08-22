@@ -1,5 +1,40 @@
-section#books{
+section#contact{
+  height: 93vh;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
 
+#parallax{
+  height: 86vh;
+  width: 100%;
+  background-image: url("../images/section-contact/IMG_2708.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+#contact-last-part{
+height:7vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#contact-links{
+  display: flex;
+  width: 50vw;
+  transition: 300ms;
+  align-items: center;
+  justify-content: space-between;
+  font-family: disketMonoRegular;
+  list-style: none;
+}
+
+#contact-links li:hover{
+  font-family: disketMonoBold;
+  font-weight: bolder;
 }
 
 
