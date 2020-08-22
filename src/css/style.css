@@ -10,7 +10,7 @@
 
 html{
   scroll-behavior: smooth;
-  font-family: "disketMonoRegular";
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -23,6 +23,21 @@ html{
 a {
   color: #333;
   text-decoration: none;
+}
+
+p{
+  line-height: 1.5;
+  font-size: 17px;
+}
+
+h1{
+  font-size:35px;
+  font-family: "disketMonoRegular";
+}
+
+h2{
+  font-size:20px;
+  font-family: "disketMonoRegular";
 }
 
 .navbar {

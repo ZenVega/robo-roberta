@@ -1,7 +1,23 @@
-section#books{
-
+section#education{
+  background-color: #A6F4DC;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5vw;
 }
 
+#education-header{
+width: 45vw;
+margin-bottom: 30px;
+}
+
+#education-text{
+width: 45vw;
+}
+
+#education-robo{
+  width: 45vw;
+
+}
 
 @media screen and (max-width: 850px){
 

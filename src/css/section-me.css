@@ -4,18 +4,17 @@ section#me{
   flex-wrap: wrap;
   justify-content: center;
   background-color: #E0777D;
-
 }
 
 #me-left-side{
-  flex:1;
+  flex:3;
   display: flex;
   flex-direction: column;
 }
 
 #me-header{
   padding:20px 10vw;
-  background-color: rgb(253, 224, 59);
+  font-family: 'Roboto', sans-serif;
 }
 
 #me-robo-image{
@@ -25,9 +24,9 @@ section#me{
 }
 
 #me-image2{
-  flex:1;
-  transform: scaleX(-1) /* rotate(45deg) */;
-  width: 20vw;
+  flex:2;
+  transform: scaleX(-1);
+  padding: 5vw;
 }
 
 @media screen and (max-width: 850px){
