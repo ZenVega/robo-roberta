@@ -51,11 +51,22 @@ align-items: center;
   #contact-links{
     width: 90vw;
   }
-  #parallax{
 
-  }
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 400px){
+
+  section#contact{
+    height: 100vh;
+  }
+
+  #contact-last-part{
+    height:150px;
+  }
+
+  #contact-links{
+    flex-direction: column;
+    height: 110px;
+  }
 
 }

@@ -51,6 +51,26 @@ background-color: #8E3B46;
   }
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 400px){
+  section#projects{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
 
+  #projects-header{
+    width: 90vw;
+  }
+  #projects-header h2{
+    margin-left:5vw;
+  }
+
+  #projects-robo-image{
+    height: 90vw;
+    margin-left: -20vw;
+  }
+  #projects-description{
+    width: 90vw;
+    margin:0;
+  }
 }

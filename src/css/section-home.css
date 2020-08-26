@@ -4,7 +4,6 @@ section#home{
   width: 100vw;
   background-color: rgb(253, 224, 59);
   padding-top: 4vw;
-
 }
 
 section#home h1{
@@ -34,19 +33,62 @@ section#home h1{
   flex:2;
   width: 50%;
 }
+#home-image-mobile{
+display: none;
+}
 
 @media screen and (max-width: 850px){
   
   section#home h1{
     margin-bottom:10vh;
   }
-
+  
   #home-subheader{
-  font-size: 1.5vw;
-  margin-left: 10%;
+    font-size: 1.5vw;
+    margin-left: 10%;
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
+  section#home {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    height: 100vh;
+  }
+  
+  section#home h1{
+    margin-bottom:0;
+    font-size: 50px;
+  }
+  
+  #home-image{
+    display: none;
+  }
+
+  #home-image-mobile{
+  display: block;
+  width: 90vw;
+  }
+
+  #home-header{
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  
+  #home-subheader{
+    font-size: 18px;
+    margin-left: 0;
+  }
+  #home-subheader h2{
+    margin-bottom: 0;
+    animation: none !important;
+    transform: none !important;
+    transition-property: none !important;
+    opacity: 1;
+  }
 
 }

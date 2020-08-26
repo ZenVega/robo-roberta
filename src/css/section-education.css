@@ -19,6 +19,10 @@ section#education{
   margin:50px 5vw;
 }
 
+#education-robo-mobile{
+  display: none;
+}
+
 
 
 @media screen and (max-width: 850px){
@@ -26,9 +30,33 @@ section#education{
     background-color: #A6F4DC;
     flex-direction: row;
   }
-
+  
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 400px){
 
+  
+  #education-header{
+    margin-left: 0;
+    margin-bottom: 0px;
+  }
+  
+  #education-header h2{
+    margin-left: 5vw;
+  }
+  
+  #education-text{
+    width: 90vw;
+    margin: 5vw;
+    text-align: center;
+  }
+  
+  #education-robo{
+    display:none;
+  }
+  
+  #education-robo-mobile{
+    display: block;
+    width:100%;
+  }
 }

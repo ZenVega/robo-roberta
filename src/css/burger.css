@@ -6,15 +6,27 @@
 
   .burger {
     position: fixed;
+    right: 0px;
+    top: 0px;
+/*     background-color:#fff;
+    border-left: solid 3px #fff;
+    border-bottom: solid 3px #fff; */
+    transition: ease 400ms;
+    height: 50px;
+    width: 50px;
+    z-index:4;
+  }
+/*   .burger {
+    position: fixed;
     right: -55px;
     top: -55px;
-    background-color: #333;
+    background-color: white;
     border-radius: 50%;
     transition: ease 400ms;
     height: 110px;
     width: 110px;
     z-index:4;
-  }
+  } */
   
   .burger-open{
     right: -300vh;
@@ -26,7 +38,8 @@
 
   .bBar {
     position: fixed;
-    background-color: #fff;
+    background-color: black;
+    border-radius: 2px;
     width:26px;
     height: 5px;
     margin: 4px;
