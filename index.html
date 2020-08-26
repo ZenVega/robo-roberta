@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap" rel="stylesheet"> 
   
   <link rel="stylesheet" href="src/css/style.css">
-  <link rel="stylesheet" href="src/css/burger.css">
+  <link rel="stylesheet" href="src/css/burger-nav.css">
 
   <link rel="stylesheet" href="src/css/section-home.css">
   <link rel="stylesheet" href="src/css/section-me.css">
@@ -42,14 +42,35 @@
 </head>
 
 <body>
-  <div id="burger" class="burger">
-    <div id="hover-box"></div>
+  <div class="burger" class="burger">
+    <div class="hover-box"></div>
     <div class="bBar bar1"></div>
-    <div class="bBar bar2"></div>
+    <div class="bBar bar2 p1"></div>
+    <div class="bBar bar2 p2"></div>
+    <div class="bBar bar2 p3"></div>
     <div class="bBar bar3"></div>
     </div>
 
+    <div class="burger-open" class="burger">
+    <div class="hover-box"></div>
+    <div class="bBar bar1"></div>
+    <div class="bBar bar2 p1"></div>
+    <div class="bBar bar2 p2"></div>
+    <div class="bBar bar2 p3"></div>
+    <div class="bBar bar3"></div>
+    </div>
+    
+
     <nav class="navbar">
+      <a class="nav-link" href="#books">Bücher</a>
+      <a class="nav-link" href="#projects">Projekte</a>
+      <a class="nav-link" href="#education">Fortbildung</a>
+      <a class="nav-link" href="#me">Über_Mich</a>
+        <a class="nav-link" href="#contact">Kontakt</a>
+    </nav>
+    
+    <nav class="navbar-open">
+      <a class="nav-link" href="#home">Home</a>
       <a class="nav-link" href="#books">Bücher</a>
       <a class="nav-link" href="#projects">Projekte</a>
       <a class="nav-link" href="#education">Fortbildung</a>
@@ -126,6 +147,7 @@
        <ul id="contact-links">
          <li>email@soundso.com</li>
          <li>social media</li>
+         <li>youtube</li>
          <li>impressum</li>
          <li> <a href="#home">TOP⇪ </a> </li>
        </ul>

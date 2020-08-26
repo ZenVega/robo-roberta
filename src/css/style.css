@@ -40,25 +40,6 @@ h2{
   font-family: "disketMonoRegular";
 }
 
-.navbar {
-  position: fixed;
-  background-color: white;
-  z-index: 3;
-  display: flex;
-  width: 100vw;
-  height: 7vh;
-  transition: 300ms;
-  justify-content: center;
-
-}
-
-.nav-link{
-  margin: 20px;
-  font-family: "disketMonoRegular";
-}
-.nav-link:hover{
-  font-family: "disketMonoBold";
-}
 
 #section-container {
   overflow: hidden;
