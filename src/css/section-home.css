@@ -36,9 +36,17 @@ section#home h1{
 }
 
 @media screen and (max-width: 850px){
+  
+  section#home h1{
+    margin-bottom:10vh;
+  }
 
+  #home-subheader{
+  font-size: 1.5vw;
+  margin-left: 10%;
+  }
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 400px){
 
 }

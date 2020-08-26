@@ -1,8 +1,39 @@
 section#me{
+  background-color: #E0777D;
+  display: grid;
+  grid-template-columns: 5vw 5vw repeat(11, auto) 5vw;
+  grid-template-rows: 10vw repeat(9, auto);
+}
+
+#me-header{
+  grid-area: 2 / 2 / 2/ 4;
+}
+#me-robo-image{
+  width:100%;
+  grid-area: 4 / 1 / 8/ 8;
+  transform: scaleX(-1);
+}
+
+#me-quote{
+  padding-top: 20px;
+  grid-area: 3 / 3 / 3/ 8;
+  font-family: 'Roboto', sans-serif;
+}
+
+#me-image{
+  grid-area: 2 / 9 / 5/ 14;
+}
+#me-image img{
+ width: 100%;
+}
+
+#me-text{
+  grid-area: 6 / 8 / 10/ 14;
+}
+
+/* section#me{
   flex-direction: row;
-  align-items: flex-end;
   flex-wrap: wrap;
-  justify-content: center;
   background-color: #E0777D;
   padding: 5vw;
 }
@@ -11,8 +42,7 @@ section#me{
   margin-top: 5vw;
 }
 #me-left-side{
-  width: 54vw;
-  flex:3;
+  flex:1;
   display: flex;
   flex-direction: column;
 }
@@ -23,20 +53,17 @@ section#me{
 }
 
 #me-robo-image{
-  width: 100%;
   padding-left: 10vw;
   transform: scaleX(-1);
 }
 
-#me-image2{
-  width: 36vw;
-  flex:2;
-  transform: scaleX(-1);
+#me-right-side{
+  flex:1;
 }
 
 #me-text{
   margin-top: 5vw;
-}
+} */
 
 
 @media screen and (max-width: 850px){

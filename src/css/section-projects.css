@@ -33,12 +33,22 @@ background-color: #8E3B46;
 
 #projects-video-preview{
   width: 30vw;
-  height: 20vw;
   margin: 5vw;;
 }
 
 @media screen and (max-width: 850px){
-
+  
+  #projects-video-preview{
+    width: 90vw;
+    margin: 5vw;
+  }
+  #projects-robo-image{
+    height: 30vw;
+  }
+  #projects-description{
+    width: 60vw;
+    margin-right: 5vw;
+  }
 }
 
 @media screen and (max-width: 350px){

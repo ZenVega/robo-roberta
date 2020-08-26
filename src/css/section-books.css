@@ -2,20 +2,25 @@ section#books{
 background-color: #4C86A8;
 padding: 5vw;
 justify-content: space-between;
+align-items: center;
 
 }
 
 #text-container{
+  padding-left:5vw;
+  flex:4;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 10vw;
-  margin-left: 5vw;
+
 }
 
-section#books img{
-  width: 30vw;
-  margin-right: 5vw;
+#books-image-desktop{
+  flex: 2;
+  padding-left:5vw;
+}
+#books-image-mobile{
+  display: none;
 }
 
 section#books h1{
@@ -25,7 +30,16 @@ section#books h1{
 }
 
 @media screen and (max-width: 850px){
-
+  section#books{
+    flex-direction: column;
+  }
+  #books-image-desktop{
+    display: none;
+  }
+  #books-image-mobile{
+   display: block;
+   margin: 20px 0;
+  }
 }
 
 @media screen and (max-width: 350px){
