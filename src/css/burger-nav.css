@@ -1,3 +1,20 @@
+.navbar-open {
+  display: none;
+}
+.navbar {
+  position: fixed;
+  background-color: white;
+  z-index: 3;
+  display: flex;
+  width:100vw;
+  height: 7vh;
+  justify-content: center;
+}
+.nav-link{
+  margin: 20px;
+  font-family: "disketMonoRegular";
+}
+
 @media screen and (max-width: 850px){
   
   .navbar {
