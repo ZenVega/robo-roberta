@@ -8,6 +8,17 @@
   src: url("../../src/data/fontDisketRostype/Disket-Mono-Bold.ttf")  format('truetype');
 }
 
+:root {
+  --home-bg-color: #FDE03B;
+  --books-bg-color:#8cb8bd;
+  --projects-bg-color: rgb(193, 231, 219);
+  --education-bg-color:#DAF0EE;
+  --me-bg-color: rgb(233, 241, 241);
+  --contact-bg-color: #fff;
+  --main-txt-color: #3B413C;
+}
+
+
 html{
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;

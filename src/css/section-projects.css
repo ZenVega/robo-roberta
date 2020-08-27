@@ -3,22 +3,24 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-between;
 align-items: center;
-background-color: #8E3B46;
+background-color: var(--projects-bg-color);
+color: var(--projects-txt-color);
 }
+
 #projects-header{
   width: 80vw;
   margin-left: 5vw;
   margin-top: 5vw;
-  color:white;
+
 }
 
 #projects-header h1{
-  color: white;
+  color: var(--projects-txt-color);
   margin-top: 30px;  
 }
 
 #projects-header h2{
-  color: white;
+  color: var(--projects-txt-color)
 }
 
 #projects-robo-image{
@@ -27,7 +29,7 @@ background-color: #8E3B46;
 }
 #projects-description{
   width: 30vw;
-  color: white;
+  color: var(--projects-txt-color);
   margin:2vw;
 }
 

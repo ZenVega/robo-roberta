@@ -2,9 +2,11 @@ section#home{
   flex-direction: row-reverse;
   align-items: flex-start;
   width: 100vw;
-  background-color: rgb(253, 224, 59);
+  background-color: var(--home-bg-color);
+  color: var(--projects-txt-color);
   padding-top: 4vw;
   min-height: 100vh;
+/*   box-shadow: 0 5px 15px 5px rgba(0,0,0,0.2); */
 }
 
 section#home h1{
