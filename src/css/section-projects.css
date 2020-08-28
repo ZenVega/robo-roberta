@@ -33,9 +33,8 @@ color: var(--projects-txt-color);
   margin:2vw;
 }
 
-#projects-video-preview{
-  width: 30vw;
-  margin: 5vw;;
+#video{
+  margin: 5vw;
 }
 
 @media screen and (max-width: 850px){

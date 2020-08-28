@@ -117,7 +117,7 @@
   /* burger hover animation */
 
   @keyframes bar1{
-    20%{width:22px; transform: rotate(90deg);}
+    20%{width:22px; transform: translateY(7px);}
     40%{width:22px;  transform: rotate(90deg) translateY(7px);}
     60%{ width:22px; transform: rotate(90deg) translateX(9px) translateY(7px);}
     100%{ width:22px; transform: rotate(90deg) translateX(9px) translateY(7px);}

@@ -16,6 +16,21 @@ section#contact{
   background-position: center;
 }
 
+#left-eye{
+  position: fixed;
+  right: 300px;
+  top: 100px;
+  z-index: -1;
+}
+#right-eye{
+  position: relative;
+  right: -300px;
+  top: 100px;
+}
+#left-eye, #right-eye{
+width:50px;
+}
+
 
 #contact-last-part{
 height:7vh;
@@ -42,10 +57,15 @@ align-items: center;
 
 @media screen and (max-width: 850px){
   section#contact{
-    height: unset;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: end;
+  }
+
+  #parallax{
+    height: 93vh;
+    background-image: url("../images/section-contact/R+R_Kontakt_Mobile_3.jpg");
   }
 
   #contact-links{
@@ -55,10 +75,6 @@ align-items: center;
 }
 
 @media screen and (max-width: 400px){
-
-  section#contact{
-    height: 100vh;
-  }
 
   #contact-last-part{
     height:150px;
