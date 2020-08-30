@@ -9,7 +9,7 @@ align-items: center;
 
 #text-container{
   padding-left:5vw;
-  flex:4;
+  width:60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,11 +18,10 @@ align-items: center;
 
 #text-container p{
   color: var(--main-txt-color);
-
 }
 
 #books-image-desktop{
-  flex: 2;
+  width:40%;
   padding-left:5vw;
 }
 #books-image-mobile{
@@ -53,6 +52,7 @@ section#books h1{
   }
   #text-container{
     padding:0;
+    width:100%;
   }
   section#books h1{
     margin-bottom: 10px;

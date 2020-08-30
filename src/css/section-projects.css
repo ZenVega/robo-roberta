@@ -7,9 +7,9 @@ section#projects{
   grid-template-areas:
 
     ". header header header header video video video video "
-    "robo robo robo robo . video video video video "
-    "robo robo robo robo text text text text text "
-    ". text2 text2 text2 text2 text2 text2 text2 text2 ";
+    "robo robo robo . . video video video video "
+    "robo robo robo text text text text text text "
+    ". . . text2 text2 text2 text2 text2 text2 ";
 
   background-color: var(--projects-bg-color);
   color: var(--projects-txt-color);
@@ -41,6 +41,7 @@ section#projects{
   align-self: self-end;
 }
 #projects-description-2{
+  margin-top: 20px;
   color: var(--projects-txt-color);
   grid-area: text2;
   align-self: self-end;
@@ -49,6 +50,7 @@ section#projects{
 #video{
   justify-self: self-end;
   grid-area: video;
+  width:100%;
 }
 
 @media screen and (max-width: 850px){
