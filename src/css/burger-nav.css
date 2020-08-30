@@ -67,6 +67,7 @@
     transition: 300ms;
     right: 5px;
     z-index:7;
+    background-blend-mode: difference;
   }
 
   
@@ -152,11 +153,12 @@
 
   .hover-box{
     position: fixed;
-    width: 40px;
+    width: 45px;
     height: 40px;
     top:0;
     right: 0;
     z-index: 20;
+
   }
   .hover-box:hover{
     cursor: pointer;

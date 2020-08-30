@@ -8,7 +8,8 @@ section#projects{
 
     ". header header header header video video video video "
     "robo robo robo robo . video video video video "
-    "robo robo robo robo text text text text text ";
+    "robo robo robo robo text text text text text "
+    ". text2 text2 text2 text2 text2 text2 text2 text2 ";
 
   background-color: var(--projects-bg-color);
   color: var(--projects-txt-color);
@@ -38,7 +39,11 @@ section#projects{
   grid-area: text;
   padding:40px 0 0 0;
   align-self: self-end;
-  
+}
+#projects-description-2{
+  color: var(--projects-txt-color);
+  grid-area: text2;
+  align-self: self-end;
 }
 
 #video{

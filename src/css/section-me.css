@@ -33,7 +33,7 @@ section#me{
 #me-text{
   grid-area: 6 / 7 / 8/ 14;
 }
-#me-text-2{
+#me-description-2{
   padding-top: 20px;
   grid-area: 9 / 2 / 10/ 14;
 }
@@ -48,8 +48,7 @@ section#me{
     display: flex;
     flex-direction: column;
     padding:5vw;
-    align-items: center;
-    text-align: center;
+
   }
 
   #me-robo-image{

@@ -72,17 +72,17 @@ align-items: center;
     width: 90vw;
   }
 
-}
-
-@media screen and (max-width: 400px){
-
   #contact-last-part{
     height:150px;
   }
-
+  
   #contact-links{
     flex-direction: column;
     height: 110px;
   }
+}
+
+@media screen and (max-width: 400px){
+
 
 }
