@@ -1,22 +1,26 @@
 section#projects{
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-between;
-align-items: center;
-background-color: var(--projects-bg-color);
-color: var(--projects-txt-color);
+  padding:5vw 5vw 5vw 0;
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 5vw repeat(8,1fr) 5vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+
+    ". header header header header video video video video "
+    "robo robo robo robo . video video video video "
+    "robo robo robo robo text text text text text ";
+
+  background-color: var(--projects-bg-color);
+  color: var(--projects-txt-color);
 }
 
-#projects-header{
-  width: 80vw;
-  margin-left: 5vw;
-  margin-top: 5vw;
 
+#projects-header{
+  grid-area: header;
 }
 
 #projects-header h1{
   color: var(--projects-txt-color);
-  margin-top: 30px;  
 }
 
 #projects-header h2{
@@ -24,52 +28,54 @@ color: var(--projects-txt-color);
 }
 
 #projects-robo-image{
-  height: 25vw;
-  transform:rotate(75deg) scaleX(-1);
+  grid-area: robo;
+  width:100%;
+  padding-top:20px;
 }
+
 #projects-description{
-  width: 30vw;
   color: var(--projects-txt-color);
-  margin:2vw;
+  grid-area: text;
+  padding:40px 0 0 0;
+  align-self: self-end;
+  
 }
 
 #video{
-  margin: 5vw;
+  justify-self: self-end;
+  grid-area: video;
 }
 
 @media screen and (max-width: 850px){
-  
-  #projects-video-preview{
-    width: 90vw;
-    margin: 5vw;
-  }
-  #projects-robo-image{
-    height: 39vw;
-  }
-  #projects-description{
-    width: 60vw;
-    margin-right: 5vw;
-  }
-}
-
-@media screen and (max-width: 400px){
   section#projects{
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+    padding: 5vw;
   }
 
   #projects-header{
     width: 90vw;
+    padding-bottom: 20px;
   }
+  #video{
+    width: 90vw;
+    height: 50.65vw;
+  }
+
+  #projects-robo-image{
+    display:none;
+  }
+
+}
+
+
+@media screen and (max-width: 400px){
+
+
   #projects-header h2{
     margin-left:5vw;
   }
 
-  #projects-robo-image{
-    height: 95vw;
-    margin-left: -20vw;
-  }
   #projects-description{
     width: 90vw;
     margin:0;

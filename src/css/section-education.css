@@ -16,7 +16,7 @@ section#education{
 }
 
 #education-robo{
-  width: 30vw;
+  width: 22vw;
   margin:50px 5vw;
 }
 
@@ -33,9 +33,7 @@ section#education{
   
 }
 
-@media screen and (max-width: 400px){
-
-  
+@media screen and (max-width: 650px){
   #education-header{
     margin-left: 0;
     margin-bottom: 0px;
@@ -48,7 +46,6 @@ section#education{
   #education-text{
     width: 90vw;
     margin: 5vw;
-    text-align: center;
   }
   
   #education-robo{
@@ -58,5 +55,7 @@ section#education{
   #education-robo-mobile{
     display: block;
     width:100%;
+
+  
   }
 }

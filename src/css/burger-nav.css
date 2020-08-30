@@ -158,6 +158,9 @@
     right: 0;
     z-index: 20;
   }
+  .hover-box:hover{
+    cursor: pointer;
+  }
 
   .burger-open {
     display:none;

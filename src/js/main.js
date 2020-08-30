@@ -12,3 +12,9 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 } 
 
+// REDUCE TEXTS IN MOBILE
+
+const booksText = document.querySelector('#books-description');
+const projectsText = document.querySelector('#projects-description');
+const educationText = document.querySelector('#education-description');
+const booksText = document.querySelector('#me-text-2');

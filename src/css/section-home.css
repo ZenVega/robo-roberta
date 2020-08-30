@@ -50,6 +50,13 @@ display: none;
     font-size: 1.5vw;
     margin-left: 10%;
   }
+  #home-subheader h2{
+    margin-bottom: 0;
+    animation: none !important;
+    transform: none !important;
+    transition-property: none !important;
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 850px) and (orientation : portrait){
@@ -86,13 +93,6 @@ display: none;
   #home-subheader{
     font-size: 18px;
     margin: 5vh 0;
-  }
-  #home-subheader h2{
-    margin-bottom: 0;
-    animation: none !important;
-    transform: none !important;
-    transition-property: none !important;
-    opacity: 1;
   }
 }
 
