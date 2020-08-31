@@ -3,6 +3,7 @@ section#education{
   color: var(--projects-txt-color);
   flex-direction: row;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 #education-header{
@@ -12,17 +13,23 @@ section#education{
 
 #education-text{
   width: 50vw;
-  margin: 10vw 0 10vw 10vw;
+  margin: 10vw 0 0 10vw;
 }
 
 #education-robo{
   width: 22vw;
-  margin:50px 5vw;
+  margin:0 5vw;
 }
 
 #education-robo-mobile{
   display: none;
 }
+
+#goggles-desktop{
+display:flex;
+justify-content: flex-end;
+}
+
 
 @media screen and (max-width: 850px){
   section#education{
@@ -31,6 +38,9 @@ section#education{
 }
 
 @media screen and (max-width: 650px){
+  #goggles-desktop{
+    display:none;
+  }
   #education-header{
     margin-left: 0;
     margin-bottom: 0px;
