@@ -38,12 +38,12 @@ justify-content: flex-end;
   section#education{
     flex-direction: row;
   }
-}
-
-@media screen and (max-width: 650px){
   #goggles-desktop{
     display:none;
   }
+}
+
+@media screen and (max-width: 650px){
   #education-header{
     margin-left: 0;
     margin-bottom: 0px;
