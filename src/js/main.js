@@ -1,16 +1,25 @@
-// HIDE NAVBAR ON SCROLL
-const navbar = document.querySelector(".navbar")
-let prevScrollpos = window.pageYOffset;
 
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    navbar.style.boxShadow = "none";
-  } else {
-    navbar.style.boxShadow = "0 5px 15px 5px rgba(0,0,0,0.2)";
-  }
-  prevScrollpos = currentScrollPos;
-} 
+  // HIDE NAVBAR ON SCROLL
+  const navbar = document.querySelector(".navbar")
+  let prevScrollpos = window.pageYOffset;
+
+ const hideNav = () => {
+   let currentScrollPos = window.pageYOffset;
+   console.log(currentScrollPos);
+   if (prevScrollpos > currentScrollPos) {
+     navbar.style.transform = "translateY(0)";
+     navbar.style.boxShadow = "0 5px 15px 5px rgba(0,0,0,0.2)";
+    } else {
+      navbar.style.boxShadow = "none";
+      navbar.style.transform = "translateY(-8vh)";
+    }
+    prevScrollpos = currentScrollPos;
+  } 
+  
+  if(window.innerWidth > 850){
+    window.addEventListener('scroll', hideNav);
+  } 
+
 
 // REDUCE TEXTS IN MOBILE
 

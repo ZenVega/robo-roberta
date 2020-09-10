@@ -5,7 +5,7 @@
 }
 @font-face {
   font-family:"disketMonoBold";
-  src: url("../../src/data/fontDisketRostype/Disket-Mono-Bold.ttf")  format('truetype');
+  src: url("../../src/data/fontDisketRostype/Disket-Mono-Bold.ttf") format('truetype');
 }
 
 :root {
@@ -39,6 +39,7 @@ a {
 p{
   line-height: 1.5;
   font-size: 17px;
+  text-align: justify;
 }
 
 h1{
@@ -59,6 +60,7 @@ h2{
 
 section {
   display: flex;
+  box-shadow: 0 5px 15px 5px rgba(0,0,0,0.2);
 }
 
 .more-btn{
