@@ -25,14 +25,7 @@ section#education{
   display: none;
 }
 
-#goggles-desktop{
-display:flex;
-justify-content: flex-end;
-}
 
-#goggles-desktop img{
-  padding:20px;
-}
 
 @media screen and (max-width: 850px){
   section#education{

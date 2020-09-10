@@ -33,6 +33,14 @@ section#books h1{
   margin-bottom: 2vw;
   margin-left: -5vw;
 }
+#goggles-desktop{
+  display:flex;
+  justify-content: flex-end;
+}
+
+#goggles-desktop img{
+  padding:10px;
+}
 
 #goggles{
   display: none;
