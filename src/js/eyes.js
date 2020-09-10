@@ -28,13 +28,10 @@
     //desktop eyes
     const page = document.querySelector('#body')
     let mousePosition = {};
-    let eyeSize = 100;
-    
-    const eyeLeftD = document.querySelector("#eye-left-d");
-    const eyeRightD = document.querySelector("#eye-right-d");
-    
-    eyeLeftD.style.cssText = `width: ${eyeSize}px; height: ${eyeSize}px;`
-    eyeRightD.style.cssText = `width: ${eyeSize}px; height: ${eyeSize}px;`
+      
+    const eyeLeftD = document.querySelector("#left-eye-home");
+    const eyeRightD = document.querySelector("#right-eye-home");
+
     
     
     const getCumulativeOffset = obj => {
@@ -56,15 +53,14 @@
       currentPositionY = document.documentElement.scrollTop;
     }
     
-    let posEyeL = getCumulativeOffset(eyeLeftD);
-    let posEyeR = getCumulativeOffset(eyeRightD);
-    
-    //center coordinates
-    posEyeL.y += eyeSize/2
-    posEyeL.x += eyeSize/2
-    posEyeR.y += eyeSize/2
-    posEyeR.x += eyeSize/2
-    
+    const posEyeL = getCumulativeOffset(eyeLeftD);
+    const posEyeR = getCumulativeOffset(eyeRightD);
+
+    const leftEyeWidth = eyeLeftD.offsetWidth;
+    const leftEyeHeight = eyeLeftD.offsetHeight;
+    const rightEyeWidth = eyeRightD.offsetWidth;
+    const rightEyeHeight = eyeRightD.offsetHeight;
+
     const findMouseCoords = e => {
       mousePosition.x = e.pageX;
       mousePosition.y = e.pageY;

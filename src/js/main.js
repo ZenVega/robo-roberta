@@ -5,7 +5,6 @@
 
  const hideNav = () => {
    let currentScrollPos = window.pageYOffset;
-   console.log(currentScrollPos);
    if (prevScrollpos > currentScrollPos) {
      navbar.style.transform = "translateY(0)";
      navbar.style.boxShadow = "0 5px 15px 5px rgba(0,0,0,0.2)";
@@ -15,7 +14,7 @@
     }
     prevScrollpos = currentScrollPos;
   } 
-  
+
   if(window.innerWidth > 850){
     window.addEventListener('scroll', hideNav);
   } 
