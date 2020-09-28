@@ -50,7 +50,6 @@ const page = document.querySelector('#body')
 let mousePosition = {};
 
 if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
-  console.log("desktop")
   
   //desktop eyes
   eyeLeftD = document.querySelector("#left-eye-home");
@@ -88,7 +87,7 @@ if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
 } else {
 
   //mobile eyes
-  console.log("mobile")
+
   eyeLeftD = document.querySelector("#left-eye-mobile");
   eyeRightD = document.querySelector("#right-eye-mobile");
 

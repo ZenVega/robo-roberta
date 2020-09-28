@@ -72,6 +72,7 @@ display: none;
 /*   background-color: lightgray; */
 }
 .robo-heart{
+  display:none;
   position: relative;
   width: 10vw;
 }
@@ -264,5 +265,47 @@ display: none;
     width:5vw;
     top: -9vw;
     left: -16vw;
+  }
+  
+  .heart-active-1{
+    display: block;
+    animation-name: rise1;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  
+  .heart-active-2{
+    display: block;
+    animation-name: rise2;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  
+  .heart-active-3{
+    display: block;
+    animation-name: rise3;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes rise1 {
+    0%   {width: 0px;}
+    50%  {width: 5vw;}
+    100% {transform: translateY(-50vh)}
+  }
+
+  @keyframes rise2 {
+    0%   {width: 0px;}
+    50%  {width: 8vw;}
+    100% {transform: translateY(-50vh)}
+  }
+
+  @keyframes rise3 {
+    0%   {width: 0px;}
+    50%  {width: 10vw;}
+    100% {transform: translateY(-50vh)}
   }
 }
