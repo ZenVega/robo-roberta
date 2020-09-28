@@ -7,8 +7,6 @@
   const height = window.innerHeight;
   const width = window.innerWidth;
 
-  const leftEyeWidth = width*0.22;
-  const rightEyeWidth = width*0.23;
 
   //factor todefine rotation angle
   let fct = (45/height)*4;
@@ -65,38 +63,48 @@
     console.log(posEyeL)
 
     const leftEyeWidth = eyeLeftD.offsetWidth;
-    const leftEyeHeight = eyeLeftD.offsetHeight;
     const rightEyeWidth = eyeRightD.offsetWidth;
-    const rightEyeHeight = eyeRightD.offsetHeight;
 
     const findMouseCoords = e => {
       mousePosition.x = e.pageX;
       mousePosition.y = e.pageY;
     }
     
+    const mapValue = (n, start1, stop1, start2, stop2, withinBounds) => {
+      const newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
+      if (!withinBounds) {
+        return newval;
+      }
+      if (start2 < stop2) {
+        return Math.max(Math.min(newval, stop2), start2);
+      } else {
+        return Math.max(Math.min(newval, start2), stop2);
+      }
+    };
+
+    
     page.addEventListener('mousemove', e => {
       if(posEyeL.y  > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight){
         findMouseCoords(e);
-
         
         lmx = mousePosition.x - posEyeL.x - leftEyeWidth/2;
         lmy = mousePosition.y - posEyeL.y - leftEyeWidth/2;
         lDist = Math.sqrt(lmx * lmx + lmy * lmy);
-        if(lDist*2 < leftEyeWidth){
-          eyeLeftD.style.cssText = `width: 2.2vw; transform: translate(${lmx}px, ${lmy}px);`
-        } else {
-          eyeLeftD.style.cssText = 'width: 2.2vw; top: -49.85vw; right:-45.8vw;'
-        }
-        lAngle = Math.atan2( lmy, lmx ) * 180 / Math.PI;
         
-        rmx = mousePosition.x - posEyeR.x;
-        rmy = mousePosition.y - posEyeR.y;
+        rmx = mousePosition.x - posEyeR.x - rightEyeWidth/2;
+        rmy = mousePosition.y - posEyeR.y - rightEyeWidth/2;
         rDist = Math.sqrt(rmx * rmx + rmy * rmy);
-        rAngle = Math.atan2( rmy, rmx ) * 180 / Math.PI;
-        
-        eyeRightD.style.transform = `rotate(${rAngle}deg)`
 
+
+        const LXOffset = mapValue(lmx, -300,100,-leftEyeWidth/3,leftEyeWidth/3, leftEyeWidth/3);
+        const LYOffset = mapValue(lmy, -300,300,-leftEyeWidth/3,leftEyeWidth/3, leftEyeWidth/3);
+
+        const RXOffset = mapValue(rmx, -100,300,-rightEyeWidth/3,rightEyeWidth/3, rightEyeWidth/3);
+        const RYOffset = mapValue(rmy, -300,300,-rightEyeWidth/3,rightEyeWidth/3, rightEyeWidth/3);
         
+        
+        eyeLeftD.style.cssText = `width: 2.2vw; transform: translate(${LXOffset}px, ${LYOffset}px);`
+        eyeRightD.style.cssText = `width: 2.3vw; transform: translate(${RXOffset}px, ${RYOffset}px);`
       }
     });
   } 
