@@ -3,7 +3,14 @@
   const eyeLeft = document.querySelector("#eye-left");
   const eyeRight = document.querySelector("#eye-right");
   const goggles = document.querySelector("#goggles");
-  let height = window.innerHeight;
+
+  const height = window.innerHeight;
+  const width = window.innerWidth;
+
+  const leftEyeWidth = width*0.22;
+  const rightEyeWidth = width*0.23;
+
+  //factor todefine rotation angle
   let fct = (45/height)*4;
   
   const goggleEyes = () => {
@@ -48,13 +55,14 @@
         y : top
       };
     };
-    let currentPositionY;
+    let currentPositionY = document.documentElement.scrollTop;
     window.onscroll= () => {
       currentPositionY = document.documentElement.scrollTop;
     }
     
     const posEyeL = getCumulativeOffset(eyeLeftD);
     const posEyeR = getCumulativeOffset(eyeRightD);
+    console.log(posEyeL)
 
     const leftEyeWidth = eyeLeftD.offsetWidth;
     const leftEyeHeight = eyeLeftD.offsetHeight;
@@ -69,10 +77,16 @@
     page.addEventListener('mousemove', e => {
       if(posEyeL.y  > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight){
         findMouseCoords(e);
+
         
-        lmx = mousePosition.x - posEyeL.x;
-        lmy = mousePosition.y - posEyeL.y;
+        lmx = mousePosition.x - posEyeL.x - leftEyeWidth/2;
+        lmy = mousePosition.y - posEyeL.y - leftEyeWidth/2;
         lDist = Math.sqrt(lmx * lmx + lmy * lmy);
+        if(lDist*2 < leftEyeWidth){
+          eyeLeftD.style.cssText = `width: 2.2vw; transform: translate(${lmx}px, ${lmy}px);`
+        } else {
+          eyeLeftD.style.cssText = 'width: 2.2vw; top: -49.85vw; right:-45.8vw;'
+        }
         lAngle = Math.atan2( lmy, lmx ) * 180 / Math.PI;
         
         rmx = mousePosition.x - posEyeR.x;
@@ -81,12 +95,8 @@
         rAngle = Math.atan2( rmy, rmx ) * 180 / Math.PI;
         
         eyeRightD.style.transform = `rotate(${rAngle}deg)`
-        eyeLeftD.style.transform = `rotate(${lAngle}deg)`
+
         
-        /*  gogglesTxt.innerHTML = `MousePosition: ${mousePosition.x} / ${mousePosition.y} <br /> EyeLeft: ${posEyeL.x} / ${posEyeL.y} <br /> Dist: ${dist} <br /> Angle: ${angle} ` */
       }
-      
     });
-    
   } 
-    
