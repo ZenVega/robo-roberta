@@ -79,10 +79,6 @@ section#projects{
 @media screen and (max-width: 400px){
 
 
-  #projects-header h2{
-    margin-left:5vw;
-  }
-
   #projects-description{
     width: 90vw;
     margin:0;
