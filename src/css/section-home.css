@@ -21,42 +21,17 @@ section#home h1{
   display: flex;
   height: 100%;
   flex-direction: column;
-
 }
-
-/* #home-subheader{
-  font-size: 1.5vw;
-  margin-left: 20%;
-}
-#home-subheader h2{
-  margin-bottom: 20px;
-  font-size: 30px;
-}
- */
 
 #home-image-wrapper{
   flex:2;
 }
 
-#fingerprint{
-  position: relative;
-  width: 10vw;
-  right: -9vw;
-  top: 3vw;
-}
-
-.heart-button-text{
-  position: relative;
-  top: 12vw;
-  text-align: center;
-  color: gray;
-  text-shadow:1px 1px 2px lightgray;
-  font-size: 5vw;
-}
 
 .home-eye {
   position: relative;
 }
+
 #left-eye-mobile{
   display: none;
 }
@@ -85,42 +60,122 @@ section#home h1{
 #home-image-mobile{
 display: none;
 }
-#robo-heart-mobile{
-  display: none;
+
+
+#robo-hearts-wrapper{
+  position: absolute;
+  width:30vw;
+  left:2.5vw;
+  top: 20vw;
+  height: 20vw;
+
+/*   background-color: lightgray; */
+}
+.robo-heart{
+  display:none;
+  position: absolute;
 }
 
-/* @media screen and (max-width: 850px){
-  
-  section#home h1{
-    margin:5vh 0;
-  }
-  
-  #home-subheader{
-    font-size: 1.5vw;
-    margin-left: 10%;
-  }
-  #home-subheader h2{
-    margin-bottom: 0;
-    animation: none !important;
-    transform: none !important;
-    transition-property: none !important;
-    opacity: 1;
-  }
+#rh1{
+  width:4vw;
+  top:13vw;
+  left:3vw;
 
-  #left-eye-home{
-    width: 3vw;
-    top: -66.5vw;
-    right:-20.2vw;
-  }
-  
-  #right-eye-home{
-    width: 3.2vw;
-    top: -66.3vw;
-    right:-24.8vw;
-  }
+}
+#rh2{
+  width:6vw;
+  top: 7vw;
+  left: 1vw;
+}
+#rh3{
+  width:3vw;
+  top: 0vw;
+  left: 20vw;
+}
+#rh4{
+  width:6vw;
+  top: 0vw;
+  left: 4vw;
+}
+#rh5{
+  width:5vw;
+  top: 0vw;
+  left: 12vw;
+}
+#rh6{
+  width:4vw;
+  top: 5vw;
+  left: 23vw;
+}
+#rh7{
+  width:6vw;
+  top: 10vw;
+  left: 25vw;
+}
+#rh8{
+  width:3vw;
+  top: -6vw;
+  left: 17vw;
+}
+#rh9{
+  width:5vw;
+  top: -7vw;
+  left: 9vw;
+}
 
+.heart-active-1{
+  display: block;
+  animation-name: rise1;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
 
-} */
+.heart-active-2{
+  display: block;
+  animation-name: rise2;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.heart-active-3{
+  display: block;
+  animation-name: rise3;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rise1 {
+  0%   {width: 0px;}
+  50%  {width: 5vw;}
+  100% {transform: translateY(-80vh)}
+}
+
+@keyframes rise2 {
+  0%   {width: 0px;}
+  50%  {width: 4vw;}
+  100% {transform: translateY(-80vh)}
+}
+
+@keyframes rise3 {
+  0%   {width: 0px;}
+  50%  {width: 6vw;}
+  100% {transform: translateY(-80vh)}
+}
+
+#hoverbox{
+  width: 18vw;
+  height:22vw;
+  opacity: 0.5;
+  position: absolute;
+  left: 9vw;
+  top: 35vw;
+}
+#hoverbox-mobile{
+  display: none;
+}
 
 @media screen and (max-width: 850px) and (orientation : portrait){
   
@@ -207,12 +262,118 @@ display: none;
     top: -69.2vw;
     right: -70.1vw;
   }
+
+  #robo-hearts-wrapper{
+    position: absolute;
+    width:30vw;
+    left:15vw;
+    top: 58vw;
+    height: 20vw;
   
-  #fingerprint{
-    position: relative;
-    width: 20vw;
-    top: 3vw;
-    right: 0;
+  /*   background-color: lightgray; */
+  }
+
+  #rh1{
+    width:4vw;
+    top:13vw;
+    left:-3vw;
+  
+  }
+  #rh2{
+    width:6vw;
+    top: 7vw;
+    left: -5vw;
+  }
+  #rh3{
+    width:3vw;
+    top: 0vw;
+    left: -3vw;
+  }
+  #rh4{
+    width:6vw;
+    top: 0vw;
+    left: 14vw;
+  }
+  #rh5{
+    width:5vw;
+    top: 0vw;
+    left: 5vw;
+  }
+  #rh6{
+    width:4vw;
+    top: 0vw;
+    left: 27vw;
+  }
+  #rh7{
+    width:6vw;
+    top: 10vw;
+    left: 25vw;
+  }
+  #rh8{
+    width:3vw;
+    top: -6vw;
+    left: 15vw;
+  }
+  #rh9{
+    width:5vw;
+    top: -5vw;
+    left: 20vw;
+  }
+  
+  .heart-active-1{
+    display: block;
+    animation-name: rise1;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  
+  .heart-active-2{
+    display: block;
+    animation-name: rise2;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  
+  .heart-active-3{
+    display: block;
+    animation-name: rise3;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes rise1 {
+    0%   {width: 0px;}
+    50%  {width: 5vw;}
+    100% {transform: translateY(-50vh)}
+  }
+  
+  @keyframes rise2 {
+    0%   {width: 0px;}
+    50%  {width: 8vw;}
+    100% {transform: translateY(-50vh)}
+  }
+  
+  @keyframes rise3 {
+    0%   {width: 0px;}
+    50%  {width: 10vw;}
+    100% {transform: translateY(-50vh)}
+  }
+ 
+  #hoverbox{
+    display: none;
+  }
+
+  #hoverbox-mobile{
+    display: block;
+    width: 25vw;
+    height:30vw;
+    opacity: 0.5;
+    position: absolute;
+    left: 17vw;
+    top: 90vw;
   }
 
 }
