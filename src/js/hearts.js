@@ -70,7 +70,7 @@ const heartsRise = () => {
     } 
   }
 }
-/* window.setInterval(function(){
+window.setInterval(function(){
   heartsRise()
-}, 100); */
+}, 100);
 
