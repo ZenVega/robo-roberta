@@ -13,6 +13,9 @@ const heart7 = document.querySelector('#rh7');
 const heart8 = document.querySelector('#rh8');
 const heart9 = document.querySelector('#rh9');
 
+const hoverbox = document.querySelector('#hoverbox');
+const hoverboxMobile = document.querySelector('#hoverbox-mobile');
+
 const heartsRise = () => {
   const classNo = Math.floor(Math.random()*3+1)
   const heart = Math.floor(Math.random()*9+1)
@@ -70,7 +73,24 @@ const heartsRise = () => {
     } 
   }
 }
-window.setInterval(function(){
-  heartsRise()
-}, 100);
+
+let myInt;
+const letHeartsRise = () => {
+  myInt = setInterval(function(){
+    heartsRise()
+  }, 100);
+}
+
+const stopHeartsRise = () => {
+  clearInterval(myInt)
+}
+
+hoverbox.onmouseover = letHeartsRise
+hoverbox.onmouseout = stopHeartsRise
+
+hoverboxMobile.onmousedown = letHeartsRise
+hoverboxMobile.onmouseup = stopHeartsRise
+
+
+
 

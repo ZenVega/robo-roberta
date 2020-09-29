@@ -165,6 +165,18 @@ display: none;
   100% {transform: translateY(-80vh)}
 }
 
+#hoverbox{
+  width: 18vw;
+  height:22vw;
+  opacity: 0.5;
+  position: absolute;
+  left: 9vw;
+  top: 35vw;
+}
+#hoverbox-mobile{
+  display: none;
+}
+
 @media screen and (max-width: 850px) and (orientation : portrait){
   
   section#home {
@@ -350,4 +362,18 @@ display: none;
     100% {transform: translateY(-50vh)}
   }
  
+  #hoverbox{
+    display: none;
+  }
+
+  #hoverbox-mobile{
+    display: block;
+    width: 25vw;
+    height:30vw;
+    opacity: 0.5;
+    position: absolute;
+    left: 17vw;
+    top: 90vw;
+  }
+
 }
