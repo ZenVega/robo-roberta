@@ -66,46 +66,46 @@ display: none;
   position: absolute;
   width:30vw;
   left:2.5vw;
-  top: 10vw;
+  top: 20vw;
   height: 20vw;
 
 /*   background-color: lightgray; */
 }
 .robo-heart{
   display:none;
-  position: relative;
-  width: 10vw;
+  position: absolute;
 }
+
 #rh1{
   width:4vw;
   top:13vw;
-  left:0vw;
+  left:3vw;
 
 }
 #rh2{
   width:6vw;
   top: 7vw;
-  left: -2vw;
+  left: 1vw;
 }
 #rh3{
   width:3vw;
   top: 0vw;
-  left: -3vw;
+  left: 20vw;
 }
 #rh4{
   width:6vw;
   top: 0vw;
-  left: -3vw;
+  left: 4vw;
 }
 #rh5{
   width:5vw;
   top: 0vw;
-  left: -2vw;
+  left: 12vw;
 }
 #rh6{
   width:4vw;
   top: 5vw;
-  left: -1vw;
+  left: 23vw;
 }
 #rh7{
   width:6vw;
@@ -120,9 +120,50 @@ display: none;
 #rh9{
   width:5vw;
   top: -7vw;
-  left: -9vw;
+  left: 9vw;
 }
 
+.heart-active-1{
+  display: block;
+  animation-name: rise1;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.heart-active-2{
+  display: block;
+  animation-name: rise2;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.heart-active-3{
+  display: block;
+  animation-name: rise3;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rise1 {
+  0%   {width: 0px;}
+  50%  {width: 5vw;}
+  100% {transform: translateY(-80vh)}
+}
+
+@keyframes rise2 {
+  0%   {width: 0px;}
+  50%  {width: 4vw;}
+  100% {transform: translateY(-80vh)}
+}
+
+@keyframes rise3 {
+  0%   {width: 0px;}
+  50%  {width: 6vw;}
+  100% {transform: translateY(-80vh)}
+}
 
 @media screen and (max-width: 850px) and (orientation : portrait){
   
@@ -213,7 +254,7 @@ display: none;
   #robo-hearts-wrapper{
     position: absolute;
     width:30vw;
-    left:12vw;
+    left:15vw;
     top: 58vw;
     height: 20vw;
   
@@ -239,12 +280,12 @@ display: none;
   #rh4{
     width:6vw;
     top: 0vw;
-    left: -3vw;
+    left: 14vw;
   }
   #rh5{
     width:5vw;
     top: 0vw;
-    left: -3vw;
+    left: 5vw;
   }
   #rh6{
     width:4vw;
@@ -263,8 +304,8 @@ display: none;
   }
   #rh9{
     width:5vw;
-    top: -9vw;
-    left: -16vw;
+    top: -5vw;
+    left: 20vw;
   }
   
   .heart-active-1{
@@ -290,22 +331,23 @@ display: none;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }
-
+  
   @keyframes rise1 {
     0%   {width: 0px;}
     50%  {width: 5vw;}
     100% {transform: translateY(-50vh)}
   }
-
+  
   @keyframes rise2 {
     0%   {width: 0px;}
     50%  {width: 8vw;}
     100% {transform: translateY(-50vh)}
   }
-
+  
   @keyframes rise3 {
     0%   {width: 0px;}
     50%  {width: 10vw;}
     100% {transform: translateY(-50vh)}
   }
+ 
 }
