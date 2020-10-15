@@ -1,3 +1,13 @@
+// butterfly
+let butterfly = document.getElementById('butterfly');
+console.log(butterfly)
+
+
+const moveButterfly = (x,y) => {
+  console.log(x,y)
+  butterfly.style.top = `${y}px`
+  butterfly.style.left = `${x}px`
+}
 
 //mobile eyes
 
@@ -28,8 +38,6 @@ window.onscroll= () => {
 
 
 
-
-
 const findMouseCoords = e => {
   mousePosition.x = e.pageX;
   mousePosition.y = e.pageY;
@@ -52,6 +60,10 @@ let mousePosition = {};
 
 if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
   
+  const butterflyX = butterfly.x
+  const butterflyY = butterfly.y
+  console.log(butterflyX)
+
   //desktop eyes
   eyeLeftD = document.querySelector("#left-eye-home");
   eyeRightD = document.querySelector("#right-eye-home");
@@ -83,6 +95,8 @@ if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
       
       eyeLeftD.style.cssText = `width: 2.2vw; transform: translate(${LXOffset}px, ${LYOffset}px);`
       eyeRightD.style.cssText = `width: 2.3vw; transform: translate(${RXOffset}px, ${RYOffset}px);`
+
+      moveButterfly(mousePosition.x, mousePosition.y)
     }
   });
 } else {

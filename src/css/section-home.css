@@ -6,7 +6,6 @@ section#home{
   color: var(--projects-txt-color);
   padding-top: 4vw;
   min-height: 100vh;
-/*   box-shadow: 0 5px 15px 5px rgba(0,0,0,0.2); */
 }
 
 section#home h1{
@@ -27,6 +26,14 @@ section#home h1{
   flex:2;
 }
 
+#butterfly{
+  position:absolute;
+  width: 8vw;
+  height: auto;
+  transform: translate(-4vw, -4vw);
+  transition: ease 800ms;
+  z-index:1;
+}
 
 .home-eye {
   position: relative;
@@ -237,6 +244,10 @@ display: none;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 0;
+  }
+
+  #butterfly{
+    width: 10vw;
   }
 
   #left-eye-home{
