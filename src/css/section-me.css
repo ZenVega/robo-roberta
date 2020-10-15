@@ -59,10 +59,10 @@ section#me{
 
   #me-img-mobile{
     display: block;
+    width: 100%;
   }
   
   #me-image{
-    width: 100%;
     padding: 20px 0;
   }
 
