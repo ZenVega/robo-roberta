@@ -76,6 +76,12 @@ section {
     display: none;
   }
 
+  .more-btn{
+    display:block;
+  }
+  .text-pt-2{
+    display:none;
+  }
 }
 
 @media screen and (max-width: 400px){
@@ -89,10 +95,4 @@ section {
     font-size: 15px;
   }
 
-  .more-btn{
-    display:block;
-  }
-  .text-pt-2{
-    display:none;
-  }
 }

@@ -2,6 +2,7 @@
 let butterfly = document.getElementById('butterfly');
 
 const moveButterfly = (x,y) => {
+  console.log('fly')
   const formerPosition = {x: butterfly.x, y: butterfly.x} 
   
   if(formerPosition.x < x){
@@ -103,7 +104,6 @@ if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
     }
   });
 } else {
-  console.log("mobile")
   //mobile eyes
   
   eyeLeftD = document.querySelector("#left-eye-mobile");
@@ -116,14 +116,15 @@ if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
   const rightEyeWidth = eyeRightD.offsetWidth;
   
   page.addEventListener('click', e => {
+    console.log('click')
     if(posEyeL.y  > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight){
       findMouseCoords(e);
+      moveButterfly(mousePosition.x, mousePosition.y)
       
       lmx = mousePosition.x - posEyeL.x - leftEyeWidth/2;
       lmy = mousePosition.y - posEyeL.y - leftEyeWidth/2;
       lDist = Math.sqrt(lmx * lmx + lmy * lmy);
       
-      moveButterfly(mousePosition.x, mousePosition.y)
       
       rmx = mousePosition.x - posEyeR.x - rightEyeWidth/2;
       rmy = mousePosition.y - posEyeR.y - rightEyeWidth/2;
