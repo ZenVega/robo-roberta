@@ -379,10 +379,11 @@ display: none;
 
   #hoverbox-mobile{
     display: block;
+    position: absolute;
     width: 25vw;
     height:30vw;
-    opacity: 0.5;
-    position: absolute;
+    opacity: 0;
+    background-color: aqua;
     left: 17vw;
     top: 90vw;
   }

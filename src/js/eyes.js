@@ -103,18 +103,18 @@ if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
     }
   });
 } else {
-
+  console.log("mobile")
   //mobile eyes
-
+  
   eyeLeftD = document.querySelector("#left-eye-mobile");
   eyeRightD = document.querySelector("#right-eye-mobile");
-
+  
   const posEyeL = getCumulativeOffset(eyeLeftD);
   const posEyeR = getCumulativeOffset(eyeRightD);
-
+  
   const leftEyeWidth = eyeLeftD.offsetWidth;
   const rightEyeWidth = eyeRightD.offsetWidth;
-
+  
   page.addEventListener('click', e => {
     if(posEyeL.y  > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight){
       findMouseCoords(e);
@@ -122,6 +122,8 @@ if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
       lmx = mousePosition.x - posEyeL.x - leftEyeWidth/2;
       lmy = mousePosition.y - posEyeL.y - leftEyeWidth/2;
       lDist = Math.sqrt(lmx * lmx + lmy * lmy);
+      
+      moveButterfly(mousePosition.x, mousePosition.y)
       
       rmx = mousePosition.x - posEyeR.x - rightEyeWidth/2;
       rmy = mousePosition.y - posEyeR.y - rightEyeWidth/2;
@@ -139,5 +141,7 @@ if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
     }
   });
 }
+  
+
 
   

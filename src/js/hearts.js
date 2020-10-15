@@ -1,5 +1,5 @@
-/* heart-active-1 */
-/* rh1 */
+
+
 let arrayOfHearts = [1,2,3,4,5,6,7,8,9];
 const timeout = 3000;
 
@@ -17,7 +17,6 @@ const hoverbox = document.querySelector('#hoverbox');
 const hoverboxMobile = document.querySelector('#hoverbox-mobile');
 
 const heartsRise = () => {
-  console.log('hearts')
   const classNo = Math.floor(Math.random()*3+1)
   const heart = Math.floor(Math.random()*9+1)
   const index = arrayOfHearts.indexOf(heart) 
@@ -86,11 +85,23 @@ const stopHeartsRise = () => {
   clearInterval(myInt)
 }
 
+document.addEventListener('click', function(event) {
+  let isClickInside = hoverboxMobile.contains(event.target);
+  console.log(isClickInside)
+
+  if (isClickInside) {
+    letHeartsRise()
+    //the click was outside the specifiedElement, do something
+  } else {
+    stopHeartsRise()
+  }
+});
+
 hoverbox.onmouseover = letHeartsRise
 hoverbox.onmouseout = stopHeartsRise
 
-hoverboxMobile.onmousedown = letHeartsRise
-hoverboxMobile.onmouseup = stopHeartsRise
+/* hoverboxMobile.onmousedown = letHeartsRise
+hoverboxMobile.onmouseup = stopHeartsRise */
 
 
 
