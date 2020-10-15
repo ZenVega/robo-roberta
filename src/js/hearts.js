@@ -17,6 +17,7 @@ const hoverbox = document.querySelector('#hoverbox');
 const hoverboxMobile = document.querySelector('#hoverbox-mobile');
 
 const heartsRise = () => {
+  console.log('hearts')
   const classNo = Math.floor(Math.random()*3+1)
   const heart = Math.floor(Math.random()*9+1)
   const index = arrayOfHearts.indexOf(heart) 
