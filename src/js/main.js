@@ -42,3 +42,15 @@ meBtn.addEventListener('click', () => {
   meBtn.style.display= "none";
   meText.style.display="block"
 })
+
+//open and clos impressum
+
+const impressum = document.getElementById('impressum');
+const closeBtn = document.getElementById('close-btn-impressum'); 
+const impressumBtn = document.getElementById('impressum-Btn'); 
+
+impressumBtn.addEventListener('click',()=> {
+  impressum.style.display = 'block'
+  window.scrollBy(0, window.innerHeight);
+})
+closeBtn.addEventListener('click',()=> impressum.style.display = 'none')
