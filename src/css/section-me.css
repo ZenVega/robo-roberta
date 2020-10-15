@@ -17,7 +17,6 @@ section#me{
 }
 
 #me-quote{
-
   grid-area: 3 / 3 / 3/ 8;
   font-family: 'Roboto', sans-serif;
   font-style: italic;
@@ -26,8 +25,11 @@ section#me{
 #me-image{
   grid-area: 3 / 9 / 6/ 14;
 }
-#me-image img{
+#me-img-desktop{
  width: 100%;
+}
+#me-img-mobile{
+ display:none;
 }
 
 #me-text{
@@ -38,10 +40,6 @@ section#me{
   grid-area: 9 / 2 / 10/ 14;
 }
 
-
-@media screen and (max-width: 850px){
-
-}
 
 @media screen and (max-width: 500px){
   section#me{
@@ -55,7 +53,16 @@ section#me{
     display: none;
   }
 
+  #me-img-desktop{
+    display:none;
+   }
+
+  #me-img-mobile{
+    display: block;
+  }
+  
   #me-image{
+    width: 100%;
     padding: 20px 0;
   }
 

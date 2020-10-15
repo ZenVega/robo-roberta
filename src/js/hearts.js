@@ -90,6 +90,7 @@ document.addEventListener('click', function(event) {
   console.log(isClickInside)
 
   if (isClickInside) {
+    console.log("in")
     letHeartsRise()
     //the click was outside the specifiedElement, do something
   } else {
