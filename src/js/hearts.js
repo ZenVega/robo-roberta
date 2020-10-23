@@ -86,11 +86,9 @@ const stopHeartsRise = () => {
 }
 
 document.addEventListener('click', function(event) {
-  let isClickInside = hoverboxMobile.contains(event.target);
-  console.log(isClickInside)
+  const isClickInside = hoverboxMobile.contains(event.target);
 
   if (isClickInside) {
-    console.log("in")
     letHeartsRise()
     //the click was outside the specifiedElement, do something
   } else {

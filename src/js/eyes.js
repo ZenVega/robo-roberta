@@ -2,8 +2,7 @@
 let butterfly = document.getElementById('butterfly');
 
 const moveButterfly = (x,y) => {
-  console.log('fly')
-  const formerPosition = {x: butterfly.x, y: butterfly.x} 
+  const formerPosition = {x: butterfly.x} 
   
   if(formerPosition.x < x){
     butterfly.style.transform = 'rotate(20deg)translate(-4vw, -4vw)'  
@@ -13,7 +12,6 @@ const moveButterfly = (x,y) => {
   butterfly.style.top = `${y}px`
   butterfly.style.left = `${x}px`
 
-  //butterfly.style.transform = 'rotate(0deg)'
 }
 
 //mobile eyes
@@ -116,7 +114,6 @@ if(window.innerWidth > 850 || window.innerHeight < window.innerWidth){
   const rightEyeWidth = eyeRightD.offsetWidth;
   
   page.addEventListener('click', e => {
-    console.log('click')
     if(posEyeL.y  > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight){
       findMouseCoords(e);
       moveButterfly(mousePosition.x, mousePosition.y)
