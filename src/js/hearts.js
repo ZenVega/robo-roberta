@@ -1,6 +1,6 @@
 
 
-let arrayOfHearts = [1,2,3,4,5,6,7,8,9];
+let arrayOfHearts = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const timeout = 3000;
 
 const heart1 = document.querySelector('#rh1');
@@ -17,66 +17,67 @@ const hoverbox = document.querySelector('#hoverbox');
 const hoverboxMobile = document.querySelector('#hoverbox-mobile');
 
 const heartsRise = () => {
-  const classNo = Math.floor(Math.random()*3+1)
-  const heart = Math.floor(Math.random()*9+1)
-  const index = arrayOfHearts.indexOf(heart) 
-  
-  if(index != -1){
-    switch(heart) {
+  const classNo = Math.floor(Math.random() * 3 + 1)
+  const heart = Math.floor(Math.random() * 9 + 1)
+  const index = arrayOfHearts.indexOf(heart)
+
+  if (index != -1) {
+    switch (heart) {
       case 1:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart1.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       case 2:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart2.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       case 3:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart3.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       case 4:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart4.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       case 5:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart5.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       case 6:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart6.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       case 7:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart7.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       case 8:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart8.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       case 9:
-        arrayOfHearts.splice(index,1)
+        arrayOfHearts.splice(index, 1)
         heart9.classList.toggle(`heart-active-${classNo}`)
         setTimeout(arrayOfHearts.push(heart), timeout)
         break;
       default:
         break;
-    } 
+    }
   }
 }
 
 let myInt;
 const letHeartsRise = () => {
-  myInt = setInterval(function(){
+  myInt = setInterval(function () {
+    console.log('hearts')
     heartsRise()
   }, 100);
 }
@@ -85,22 +86,26 @@ const stopHeartsRise = () => {
   clearInterval(myInt)
 }
 
-document.addEventListener('click', function(event) {
-  const isClickInside = hoverboxMobile.contains(event.target);
 
-  if (isClickInside) {
-    letHeartsRise()
-    //the click was outside the specifiedElement, do something
-  } else {
-    stopHeartsRise()
-  }
-});
+if (window.innerWidth > 850 || window.innerHeight < window.innerWidth) {
+  hoverbox.onmouseover = letHeartsRise
+  hoverbox.onmouseout = stopHeartsRise
+  
+} else {
 
-hoverbox.onmouseover = letHeartsRise
-hoverbox.onmouseout = stopHeartsRise
+  document.addEventListener('click', function (event) {
+    const isClickInside = hoverboxMobile.contains(event.target);
 
-/* hoverboxMobile.onmousedown = letHeartsRise
-hoverboxMobile.onmouseup = stopHeartsRise */
+    if (isClickInside) {
+      letHeartsRise()
+      //the click was outside the specifiedElement, do something
+    } else {
+      stopHeartsRise()
+    }
+  });
+}
+
+
 
 
 

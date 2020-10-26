@@ -31,7 +31,7 @@ section#home h1{
   width: 8vw;
   height: auto;
   transform: translate(-4vw, -4vw);
-  transition: ease 800ms;
+  transition: ease 1800ms;
   z-index:1;
 }
 
@@ -179,6 +179,7 @@ display: none;
   position: absolute;
   left: 9vw;
   top: 35vw;
+  z-index:2;
 }
 #hoverbox-mobile{
   display: none;
