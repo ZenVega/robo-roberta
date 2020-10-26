@@ -33,6 +33,8 @@ section#home h1{
   transform: translate(-4vw, -4vw);
   transition: ease 1800ms;
   z-index:1;
+  top: 30vh;
+  left: 80vw;
 }
 
 .home-eye {
@@ -387,6 +389,11 @@ display: none;
     background-color: aqua;
     left: 17vw;
     top: 90vw;
+  }
+
+  #butterfly{
+    top: 20vh;
+    left: 80vw;
   }
 
 }
