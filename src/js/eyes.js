@@ -69,7 +69,8 @@ if (window.innerWidth > 850 || window.innerHeight < window.innerWidth) {
 
   //desktop eyes
 
-
+  hoverbox.onmouseover = letHeartsRise
+  hoverbox.onmouseout = stopHeartsRise
 
   const leftEyeWidth = eyeLeft.offsetWidth;
   const rightEyeWidth = eyeRight.offsetWidth;
@@ -101,7 +102,16 @@ if (window.innerWidth > 850 || window.innerHeight < window.innerWidth) {
   });
 } else {
   //mobile eyes
+  document.addEventListener('click', function (event) {
+    const isClickInside = hoverboxMobile.contains(event.target);
 
+    if (isClickInside) {
+      letHeartsRise()
+      //the click was outside the specifiedElement, do something
+    } else {
+      stopHeartsRise()
+    }
+  });
 
   const leftEyeWidth = eyeLeft.offsetWidth;
   const rightEyeWidth = eyeRight.offsetWidth;

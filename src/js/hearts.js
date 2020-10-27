@@ -86,26 +86,6 @@ const stopHeartsRise = () => {
 }
 
 
-if (window.innerWidth > 850 || window.innerHeight < window.innerWidth) {
-  hoverbox.onmouseover = letHeartsRise
-  hoverbox.onmouseout = stopHeartsRise
-
-} else {
-
-  document.addEventListener('click', function (event) {
-    const isClickInside = hoverboxMobile.contains(event.target);
-
-    if (isClickInside) {
-      letHeartsRise()
-      //the click was outside the specifiedElement, do something
-    } else {
-      stopHeartsRise()
-    }
-  });
-}
-
-
-
 
 
 
