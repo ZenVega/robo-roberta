@@ -26,6 +26,7 @@ section#home h1{
 #home-image-wrapper{
   flex:2;
   width: 100%;
+  margin-left:-15vw;
 }
 
 #butterfly{
@@ -46,16 +47,16 @@ section#home h1{
 
 #left-eye{
   transition: ease 200ms;
-  width: 2.2vw;
-  top: -41.85vw;
-  right:-38.3vw;
+  width: 2.3vw;
+  top: -48.3vw;
+  right:-44.5vw;
 }
 
 #right-eye{
   transition: ease 200ms;
   width: 2.2vw;
-  top: -41.6vw;
-  right:-41vw;
+  top: -48vw;
+  right:-47.9vw;
 }
 
 #home-image{
@@ -190,6 +191,7 @@ section#home h1{
   
   section#home h1{
     margin-bottom:0;
+    margin-top:20vh;
     font-size: 50px;
   }
   
@@ -207,11 +209,11 @@ section#home h1{
     flex-direction: column;
   }
   
-
   #butterfly{
+    top: 20vh;
+    left: 80vw;
     width: 10vw;
   }
-
 
   #left-eye{
     transition: ease 300ms;
@@ -342,9 +344,5 @@ section#home h1{
     top: 60vh;
   }
 
-  #butterfly{
-    top: 20vh;
-    left: 80vw;
-  }
 
 }
