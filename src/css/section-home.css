@@ -81,48 +81,48 @@ section#home h1{
 #rh1{
   width:4vw;
   top:13vw;
-  left:17vw;
+  left:4vw;
 
 }
 #rh2{
   width:6vw;
   top: 7vw;
-  left: 15vw;
+  left: 2vw;
 }
 #rh3{
   width:3vw;
   top: 0vw;
-  left: 34vw;
+  left: 21vw;
 }
 #rh4{
   width:6vw;
   top: 0vw;
-  left: 18vw;
+  left: 5vw;
 }
 #rh5{
   width:5vw;
   top: 0vw;
-  left: 26vw;
+  left: 13vw;
 }
 #rh6{
   width:4vw;
   top: 5vw;
-  left: 37vw;
+  left: 24vw;
 }
 #rh7{
   width:6vw;
   top: 10vw;
-  left: 39vw;
+  left: 26vw;
 }
 #rh8{
   width:3vw;
   top: -6vw;
-  left: 31vw;
+  left: 20vw;
 }
 #rh9{
   width:5vw;
   top: -7vw;
-  left: 23vw;
+  left: 10vw;
 }
 
 .heart-active-1{
@@ -170,10 +170,11 @@ section#home h1{
 #hoverbox{
   width: 25vw;
   height:22vw;
-  opacity: 0.5;
+  opacity: 0;
+  background-color: aqua;
   position: relative;
-  left: 23vw;
-  top: 26vw;
+  left: 11vw;
+  top: 30vw;
   z-index:2;
 }
 #hoverbox-mobile{
