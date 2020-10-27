@@ -315,19 +315,19 @@ section#home h1{
   @keyframes rise1 {
     0%   {width: 0px;}
     50%  {width: 5vw;}
-    100% {transform: translateY(-80vh)}
+    100% {transform: translateY(-85vh)}
   }
   
   @keyframes rise2 {
     0%   {width: 0px;}
     50%  {width: 8vw;}
-    100% {transform: translateY(-80vh)}
+    100% {transform: translateY(-85vh)}
   }
   
   @keyframes rise3 {
     0%   {width: 0px;}
     50%  {width: 10vw;}
-    100% {transform: translateY(-80vh)}
+    100% {transform: translateY(-85vh)}
   }
  
   #hoverbox{
