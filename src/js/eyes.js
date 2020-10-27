@@ -19,8 +19,8 @@ const moveButterfly = (x, y) => {
 const height = window.innerHeight;
 const width = window.innerWidth;
 
-let eyeLeftD;
-let eyeRightD;
+const eyeLeft = document.querySelector("#left-eye");
+const eyeRight = document.querySelector("#right-eye");
 
 const getCumulativeOffset = obj => {
   let left, top;
@@ -42,7 +42,6 @@ window.onscroll = () => {
 }
 
 
-
 const findMouseCoords = e => {
   mousePosition.x = e.pageX;
   mousePosition.y = e.pageY;
@@ -62,19 +61,18 @@ const mapValue = (n, start1, stop1, start2, stop2, withinBounds) => {
 
 const page = document.querySelector('#body')
 let mousePosition = {};
+const posEyeL = getCumulativeOffset(eyeLeft);
+const posEyeR = getCumulativeOffset(eyeRight);
 
 if (window.innerWidth > 850 || window.innerHeight < window.innerWidth) {
 
 
   //desktop eyes
-  eyeLeftD = document.querySelector("#left-eye-home");
-  eyeRightD = document.querySelector("#right-eye-home");
 
-  const posEyeL = getCumulativeOffset(eyeLeftD);
-  const posEyeR = getCumulativeOffset(eyeRightD);
 
-  const leftEyeWidth = eyeLeftD.offsetWidth;
-  const rightEyeWidth = eyeRightD.offsetWidth;
+
+  const leftEyeWidth = eyeLeft.offsetWidth;
+  const rightEyeWidth = eyeRight.offsetWidth;
 
   page.addEventListener('mousemove', e => {
     if (posEyeL.y > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight) {
@@ -96,22 +94,17 @@ if (window.innerWidth > 850 || window.innerHeight < window.innerWidth) {
       const RYOffset = mapValue(rmy, -300, 300, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
 
 
-      eyeLeftD.style.cssText = `width: 2.2vw; transform: translate(${LXOffset}px, ${LYOffset}px);`
-      eyeRightD.style.cssText = `width: 2.3vw; transform: translate(${RXOffset}px, ${RYOffset}px);`
+      eyeLeft.style.cssText = `width: 2.2vw; transform: translate(${LXOffset}px, ${LYOffset}px);`
+      eyeRight.style.cssText = `width: 2.3vw; transform: translate(${RXOffset}px, ${RYOffset}px);`
 
     }
   });
 } else {
   //mobile eyes
 
-  eyeLeftD = document.querySelector("#left-eye-mobile");
-  eyeRightD = document.querySelector("#right-eye-mobile");
 
-  const posEyeL = getCumulativeOffset(eyeLeftD);
-  const posEyeR = getCumulativeOffset(eyeRightD);
-
-  const leftEyeWidth = eyeLeftD.offsetWidth;
-  const rightEyeWidth = eyeRightD.offsetWidth;
+  const leftEyeWidth = eyeLeft.offsetWidth;
+  const rightEyeWidth = eyeRight.offsetWidth;
 
   page.addEventListener('click', e => {
     if (posEyeL.y > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight) {
@@ -134,8 +127,8 @@ if (window.innerWidth > 850 || window.innerHeight < window.innerWidth) {
       const RYOffset = mapValue(rmy, -100, 100, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
 
 
-      eyeLeftD.style.cssText = `width: 3vw; transform: translate(${LXOffset}px, ${LYOffset}px);`
-      eyeRightD.style.cssText = `width: 3.1vw; transform: translate(${RXOffset}px, ${RYOffset}px);`
+      eyeLeft.style.cssText = `width: 3vw; transform: translate(${LXOffset}px, ${LYOffset}px);`
+      eyeRight.style.cssText = `width: 3.1vw; transform: translate(${RXOffset}px, ${RYOffset}px);`
     }
   });
 }

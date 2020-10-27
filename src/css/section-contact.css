@@ -16,21 +16,6 @@ section#contact{
   background-position: center;
 }
 
-#left-eye{
-  position: fixed;
-  right: 300px;
-  top: 100px;
-  z-index: -1;
-}
-#right-eye{
-  position: relative;
-  right: -300px;
-  top: 100px;
-}
-#left-eye, #right-eye{
-width:50px;
-}
-
 
 #contact-last-part{
 height:7vh;

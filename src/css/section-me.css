@@ -25,11 +25,8 @@ section#me{
 #me-image{
   grid-area: 3 / 9 / 6/ 14;
 }
-#me-img-desktop{
+#me-img{
  width: 100%;
-}
-#me-img-mobile{
- display:none;
 }
 
 #me-text{
@@ -53,13 +50,8 @@ section#me{
     display: none;
   }
 
-  #me-img-desktop{
-    display:none;
-   }
-
-  #me-img-mobile{
+  #me-img{
     display: block;
-    width: 100%;
   }
   
   #me-image{

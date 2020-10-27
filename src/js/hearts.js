@@ -77,7 +77,6 @@ const heartsRise = () => {
 let myInt;
 const letHeartsRise = () => {
   myInt = setInterval(function () {
-    console.log('hearts')
     heartsRise()
   }, 100);
 }
@@ -90,7 +89,7 @@ const stopHeartsRise = () => {
 if (window.innerWidth > 850 || window.innerHeight < window.innerWidth) {
   hoverbox.onmouseover = letHeartsRise
   hoverbox.onmouseout = stopHeartsRise
-  
+
 } else {
 
   document.addEventListener('click', function (event) {

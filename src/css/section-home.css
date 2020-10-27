@@ -12,18 +12,20 @@ section#home h1{
   font-family: disketMonoBold;
   font-size: 5vw;
   margin-bottom:22vh;
+  flex:1;
 }
 
 #home-header{
-  margin-top: 13vw;
-  flex:1;
   display: flex;
   height: 100%;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  align-items: center;
 }
+
 
 #home-image-wrapper{
   flex:2;
+  width: 100%;
 }
 
 #butterfly{
@@ -41,33 +43,23 @@ section#home h1{
   position: relative;
 }
 
-#left-eye-mobile{
-  display: none;
-}
 
-#right-eye-mobile{
-  display: none;
-}
-
-#left-eye-home{
+#left-eye{
   transition: ease 200ms;
   width: 2.2vw;
-  top: -49.85vw;
-  right:-45.8vw;
+  top: -41.85vw;
+  right:-38.3vw;
 }
 
-#right-eye-home{
+#right-eye{
   transition: ease 200ms;
-  width: 2.3vw;
-  top: -49.6vw;
-  right:-49.5vw;
+  width: 2.2vw;
+  top: -41.6vw;
+  right:-41vw;
 }
 
 #home-image{
   width: 100%;
-}
-#home-image-mobile{
-display: none;
 }
 
 
@@ -88,48 +80,48 @@ display: none;
 #rh1{
   width:4vw;
   top:13vw;
-  left:3vw;
+  left:17vw;
 
 }
 #rh2{
   width:6vw;
   top: 7vw;
-  left: 1vw;
+  left: 15vw;
 }
 #rh3{
   width:3vw;
   top: 0vw;
-  left: 20vw;
+  left: 34vw;
 }
 #rh4{
   width:6vw;
   top: 0vw;
-  left: 4vw;
+  left: 18vw;
 }
 #rh5{
   width:5vw;
   top: 0vw;
-  left: 12vw;
+  left: 26vw;
 }
 #rh6{
   width:4vw;
   top: 5vw;
-  left: 23vw;
+  left: 37vw;
 }
 #rh7{
   width:6vw;
   top: 10vw;
-  left: 25vw;
+  left: 39vw;
 }
 #rh8{
   width:3vw;
   top: -6vw;
-  left: 17vw;
+  left: 31vw;
 }
 #rh9{
   width:5vw;
   top: -7vw;
-  left: 9vw;
+  left: 23vw;
 }
 
 .heart-active-1{
@@ -175,12 +167,12 @@ display: none;
 }
 
 #hoverbox{
-  width: 18vw;
+  width: 25vw;
   height:22vw;
   opacity: 0.5;
-  position: absolute;
-  left: 9vw;
-  top: 35vw;
+  position: relative;
+  left: 23vw;
+  top: 26vw;
   z-index:2;
 }
 #hoverbox-mobile{
@@ -201,11 +193,8 @@ display: none;
     font-size: 50px;
   }
   
+  
   #home-image{
-    display: none;
-  }
-
-  #home-image-mobile{
   display: block;
   width: 90vw;
   }
@@ -215,9 +204,8 @@ display: none;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 0;
+    flex-direction: column;
   }
-
-
 }
 
 @media screen and (max-width: 850px){
@@ -233,35 +221,14 @@ display: none;
     font-size: 50px;
   }
   
-  #home-image{
-    display: none;
-  }
-
-  #home-image-mobile{
-  display: block;
-  width: 90vw;
-  }
-
-  #home-header{
-    height: 100vh;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 0;
-  }
+  
 
   #butterfly{
     width: 10vw;
   }
 
-  #left-eye-home{
-    display: none;
-  }
-  
-  #right-eye-home{
-    display: none;
-  }
 
-  #left-eye-mobile{
+  #left-eye{
     transition: ease 300ms;
     display: block;
     width: 3.1vw;
@@ -269,7 +236,7 @@ display: none;
     right: -62vw;
   }
   
-  #right-eye-mobile{
+  #right-eye{
     transition: ease 300ms;
     display: block;
     width: 3.2vw;
@@ -289,48 +256,48 @@ display: none;
 
   #rh1{
     width:4vw;
-    top:13vw;
+    top:43vh;
     left:-3vw;
   
   }
   #rh2{
     width:6vw;
-    top: 7vw;
+    top: 37vh;
     left: -5vw;
   }
   #rh3{
     width:3vw;
-    top: 0vw;
+    top: 30vh;
     left: -3vw;
   }
   #rh4{
     width:6vw;
-    top: 0vw;
+    top: 30vh;
     left: 14vw;
   }
   #rh5{
     width:5vw;
-    top: 0vw;
+    top: 30vh;
     left: 5vw;
   }
   #rh6{
     width:4vw;
-    top: 0vw;
+    top: 30vh;
     left: 27vw;
   }
   #rh7{
     width:6vw;
-    top: 10vw;
+    top: 40vh;
     left: 25vw;
   }
   #rh8{
     width:3vw;
-    top: -6vw;
+    top: 24vh;
     left: 15vw;
   }
   #rh9{
     width:5vw;
-    top: -5vw;
+    top: 25vw;
     left: 20vw;
   }
   
@@ -361,19 +328,19 @@ display: none;
   @keyframes rise1 {
     0%   {width: 0px;}
     50%  {width: 5vw;}
-    100% {transform: translateY(-50vh)}
+    100% {transform: translateY(-80vh)}
   }
   
   @keyframes rise2 {
     0%   {width: 0px;}
     50%  {width: 8vw;}
-    100% {transform: translateY(-50vh)}
+    100% {transform: translateY(-80vh)}
   }
   
   @keyframes rise3 {
     0%   {width: 0px;}
     50%  {width: 10vw;}
-    100% {transform: translateY(-50vh)}
+    100% {transform: translateY(-80vh)}
   }
  
   #hoverbox{
@@ -385,10 +352,9 @@ display: none;
     position: absolute;
     width: 25vw;
     height:30vw;
-    opacity: 0;
-    background-color: aqua;
+    opacity: 0.5;
     left: 17vw;
-    top: 90vw;
+    top: 60vh;
   }
 
   #butterfly{
