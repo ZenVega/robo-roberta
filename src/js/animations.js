@@ -117,6 +117,7 @@ const getCumulativeOffset = obj => {
 };
 
 let currentPositionY = document.documentElement.scrollTop;
+
 window.onscroll = () => {
   currentPositionY = document.documentElement.scrollTop;
 }
@@ -127,6 +128,7 @@ const posEyeR = getCumulativeOffset(eyeRight);
 let butterfly = document.getElementById('butterfly');
 
 const moveButterfly = (x, y) => {
+  console.log('fly')
   let formerPosition = { x: butterfly.x }
 
   if (formerPosition.x < x) {
@@ -155,7 +157,7 @@ const mapValue = (n, start1, stop1, start2, stop2, withinBounds) => {
 
 
 if (window.innerWidth > 1024) {
-  //desktop eyes
+  //desktop
 
   hoverbox.onmouseover = letHeartsRise
   hoverbox.onmouseout = stopHeartsRise
@@ -164,7 +166,10 @@ if (window.innerWidth > 1024) {
   const rightEyeWidth = eyeRight.offsetWidth;
 
   document.body.addEventListener('mousemove', e => {
-    if (posEyeL.y > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight) {
+    console.log('mousemove')
+    if (currentPositionY < window.innerHeight) {
+      console.log('focused')
+
       findMouseCoords(e);
       moveButterfly(mousePosition.x, mousePosition.y)
 
@@ -191,7 +196,7 @@ if (window.innerWidth > 1024) {
 
 } else {
 
-  //mobile eyes
+  //mobile
 
   const leftEyeWidth = eyeLeft.offsetWidth;
   const rightEyeWidth = eyeRight.offsetWidth;

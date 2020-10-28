@@ -188,7 +188,7 @@ section#home h1{
     display:block;
     width: 19vw;
     height:25vw;
-    opacity: 0.5;
+    opacity: 0;
     background-color: aqua;
     position: absolute;
     left: 11vw;
@@ -358,7 +358,7 @@ section#home h1{
     background-color: gold;
     width: 25vw;
     height:30vw;
-    opacity: 0.5;
+    opacity: 0;
     left: 17vw;
     top: 67vh;
   }
