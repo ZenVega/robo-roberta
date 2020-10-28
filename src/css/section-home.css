@@ -181,7 +181,24 @@ section#home h1{
   display: none;
 }
 
-@media screen and (max-width: 850px){
+
+@media screen and (max-width: 1025px){
+
+  #hoverbox-mobile{
+    display:block;
+    width: 19vw;
+    height:25vw;
+    opacity: 0.5;
+    background-color: aqua;
+    position: absolute;
+    left: 11vw;
+    top: 32vw;
+    z-index:2;
+  }
+}
+
+
+@media screen and (orientation: portrait){
   
   section#home {
     flex-direction: column;
@@ -338,11 +355,12 @@ section#home h1{
   #hoverbox-mobile{
     display: block;
     position: absolute;
+    background-color: gold;
     width: 25vw;
     height:30vw;
     opacity: 0.5;
     left: 17vw;
-    top: 60vh;
+    top: 67vh;
   }
 
 
