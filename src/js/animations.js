@@ -123,8 +123,6 @@ window.onscroll = () => {
 }
 
 let mousePosition = {};
-let posEyeL = getCumulativeOffset(eyeLeft);
-let posEyeR = getCumulativeOffset(eyeRight);
 let butterfly = document.getElementById('butterfly');
 
 const moveButterfly = (x, y) => {
@@ -154,89 +152,88 @@ const mapValue = (n, start1, stop1, start2, stop2, withinBounds) => {
 };
 
 
-
-if (window.innerWidth > 1024) {
-  //desktop
-
-  hoverbox.onmouseover = letHeartsRise
-  hoverbox.onmouseout = stopHeartsRise
-
-  const leftEyeWidth = eyeLeft.offsetWidth;
-  const rightEyeWidth = eyeRight.offsetWidth;
-
-  document.body.addEventListener('mousemove', e => {
-    if (currentPositionY < window.innerHeight) {
-
-      findMouseCoords(e);
-      moveButterfly(mousePosition.x, mousePosition.y)
-
-      lmx = mousePosition.x - posEyeL.x - leftEyeWidth / 2;
-      lmy = mousePosition.y - posEyeL.y - leftEyeWidth / 2;
-      lDist = Math.sqrt(lmx * lmx + lmy * lmy);
-
-      rmx = mousePosition.x - posEyeR.x - rightEyeWidth / 2;
-      rmy = mousePosition.y - posEyeR.y - rightEyeWidth / 2;
-      rDist = Math.sqrt(rmx * rmx + rmy * rmy);
-
-
-      const LXOffset = mapValue(lmx, -300, 100, -leftEyeWidth / 3, leftEyeWidth / 3, leftEyeWidth / 3);
-      const LYOffset = mapValue(lmy, -300, 300, -leftEyeWidth / 3, leftEyeWidth / 3, leftEyeWidth / 3);
-      const RXOffset = mapValue(rmx, -100, 300, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
-      const RYOffset = mapValue(rmy, -300, 300, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
-
-
-      eyeLeft.style.cssText = `transform: translate(${LXOffset}px, ${LYOffset}px);`
-      eyeRight.style.cssText = `transform: translate(${RXOffset}px, ${RYOffset}px);`
-
-    }
-  });
-
-} else {
-
-  //mobile
-
-  const leftEyeWidth = eyeLeft.offsetWidth;
-  const rightEyeWidth = eyeRight.offsetWidth;
-
-  document.body.addEventListener('click', e => {
-
-    const isClickInside = hoverboxMobile.contains(e.target);
-
-    if (isClickInside) {
-      letHeartsRise()
-      //the click was outside the specifiedElement, do something
-    } else {
-      stopHeartsRise()
-    }
-
-
-    if (currentPositionY < window.innerHeight * 2) {
-      findMouseCoords(e);
-      moveButterfly(mousePosition.x, mousePosition.y)
-      posEyeL = getCumulativeOffset(eyeLeft);
-      posEyeR = getCumulativeOffset(eyeRight);
-
-      lmx = mousePosition.x - posEyeL.x - leftEyeWidth / 2;
-      lmy = mousePosition.y - posEyeL.y - leftEyeWidth / 2;
-      lDist = Math.sqrt(lmx * lmx + lmy * lmy);
-
-      rmx = mousePosition.x - posEyeR.x - rightEyeWidth / 2;
-      rmy = mousePosition.y - posEyeR.y - rightEyeWidth / 2;
-      rDist = Math.sqrt(rmx * rmx + rmy * rmy);
-
-
-      const LXOffset = mapValue(lmx, -100, 50, -leftEyeWidth / 3, leftEyeWidth / 3, leftEyeWidth / 3);
-      const LYOffset = mapValue(lmy, -100, 100, -leftEyeWidth / 3, leftEyeWidth / 3, leftEyeWidth / 3);
-      const RXOffset = mapValue(rmx, -50, 50, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
-      const RYOffset = mapValue(rmy, -100, 100, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
-
-
-      eyeLeft.style.cssText = `transform: translate(${LXOffset}px, ${LYOffset}px);`
-      eyeRight.style.cssText = `transform: translate(${RXOffset}px, ${RYOffset}px);`
-    }
-  });
-}
-
-
-
-
+  
+  if (window.innerWidth > 1024) {
+    //desktop
+    
+    hoverbox.onmouseover = letHeartsRise
+    hoverbox.onmouseout = stopHeartsRise
+    
+    const leftEyeWidth = eyeLeft.offsetWidth;
+    const rightEyeWidth = eyeRight.offsetWidth;
+    
+    document.body.addEventListener('mousemove', e => {
+      if (currentPositionY < window.innerHeight) {
+        const posEyeL = getCumulativeOffset(eyeLeft);
+        const posEyeR = getCumulativeOffset(eyeRight);
+        
+        findMouseCoords(e);
+        moveButterfly(mousePosition.x, mousePosition.y)
+        
+        lmx = mousePosition.x - posEyeL.x - leftEyeWidth / 2;
+        lmy = mousePosition.y - posEyeL.y - leftEyeWidth / 2;
+        lDist = Math.sqrt(lmx * lmx + lmy * lmy);
+        
+        rmx = mousePosition.x - posEyeR.x - rightEyeWidth / 2;
+        rmy = mousePosition.y - posEyeR.y - rightEyeWidth / 2;
+        rDist = Math.sqrt(rmx * rmx + rmy * rmy);
+        
+        
+        const LXOffset = mapValue(lmx, -300, 100, -leftEyeWidth / 3, leftEyeWidth / 3, leftEyeWidth / 3);
+        const LYOffset = mapValue(lmy, -300, 300, -leftEyeWidth / 3, leftEyeWidth / 3, leftEyeWidth / 3);
+        const RXOffset = mapValue(rmx, -100, 300, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
+        const RYOffset = mapValue(rmy, -300, 300, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
+        
+        
+        eyeLeft.style.cssText = `transform: translate(${LXOffset}px, ${LYOffset}px);`
+        eyeRight.style.cssText = `transform: translate(${RXOffset}px, ${RYOffset}px);`
+        
+      }
+    });
+    
+  } else {
+    
+    //mobile
+    
+    const leftEyeWidth = eyeLeft.offsetWidth;
+    const rightEyeWidth = eyeRight.offsetWidth;
+    
+    document.body.addEventListener('click', e => {
+      
+      const isClickInside = hoverboxMobile.contains(e.target);
+      
+      if (isClickInside) {
+        letHeartsRise()
+        //the click was outside the specifiedElement, do something
+      } else {
+        stopHeartsRise()
+      }
+      
+      
+      if (currentPositionY < window.innerHeight * 2) {
+        findMouseCoords(e);
+        moveButterfly(mousePosition.x, mousePosition.y)
+        const posEyeL = getCumulativeOffset(eyeLeft);
+        const posEyeR = getCumulativeOffset(eyeRight);
+        
+        lmx = mousePosition.x - posEyeL.x - leftEyeWidth / 2;
+        lmy = mousePosition.y - posEyeL.y - leftEyeWidth / 2;
+        lDist = Math.sqrt(lmx * lmx + lmy * lmy);
+        
+        rmx = mousePosition.x - posEyeR.x - rightEyeWidth / 2;
+        rmy = mousePosition.y - posEyeR.y - rightEyeWidth / 2;
+        rDist = Math.sqrt(rmx * rmx + rmy * rmy);
+        
+        
+        const LXOffset = mapValue(lmx, -100, 50, -leftEyeWidth / 3, leftEyeWidth / 3, leftEyeWidth / 3);
+        const LYOffset = mapValue(lmy, -100, 100, -leftEyeWidth / 3, leftEyeWidth / 3, leftEyeWidth / 3);
+        const RXOffset = mapValue(rmx, -50, 50, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
+        const RYOffset = mapValue(rmy, -100, 100, -rightEyeWidth / 3, rightEyeWidth / 3, rightEyeWidth / 3);
+        
+        
+        eyeLeft.style.cssText = `transform: translate(${LXOffset}px, ${LYOffset}px);`
+        eyeRight.style.cssText = `transform: translate(${RXOffset}px, ${RYOffset}px);`
+      }
+    });
+  }
+  
