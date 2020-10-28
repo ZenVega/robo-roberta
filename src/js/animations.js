@@ -123,12 +123,11 @@ window.onscroll = () => {
 }
 
 let mousePosition = {};
-const posEyeL = getCumulativeOffset(eyeLeft);
-const posEyeR = getCumulativeOffset(eyeRight);
+let posEyeL = getCumulativeOffset(eyeLeft);
+let posEyeR = getCumulativeOffset(eyeRight);
 let butterfly = document.getElementById('butterfly');
 
 const moveButterfly = (x, y) => {
-  console.log('fly')
   let formerPosition = { x: butterfly.x }
 
   if (formerPosition.x < x) {
@@ -214,6 +213,8 @@ if (window.innerWidth > 1024) {
     if (currentPositionY < window.innerHeight * 2) {
       findMouseCoords(e);
       moveButterfly(mousePosition.x, mousePosition.y)
+      posEyeL = getCumulativeOffset(eyeLeft);
+      posEyeR = getCumulativeOffset(eyeRight);
 
       lmx = mousePosition.x - posEyeL.x - leftEyeWidth / 2;
       lmy = mousePosition.y - posEyeL.y - leftEyeWidth / 2;
