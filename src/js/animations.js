@@ -166,9 +166,7 @@ if (window.innerWidth > 1024) {
   const rightEyeWidth = eyeRight.offsetWidth;
 
   document.body.addEventListener('mousemove', e => {
-    console.log('mousemove')
     if (currentPositionY < window.innerHeight) {
-      console.log('focused')
 
       findMouseCoords(e);
       moveButterfly(mousePosition.x, mousePosition.y)
@@ -213,14 +211,13 @@ if (window.innerWidth > 1024) {
     }
 
 
-    if (posEyeL.y > currentPositionY && posEyeL.y < currentPositionY + window.innerHeight) {
+    if (currentPositionY < window.innerHeight * 2) {
       findMouseCoords(e);
       moveButterfly(mousePosition.x, mousePosition.y)
 
       lmx = mousePosition.x - posEyeL.x - leftEyeWidth / 2;
       lmy = mousePosition.y - posEyeL.y - leftEyeWidth / 2;
       lDist = Math.sqrt(lmx * lmx + lmy * lmy);
-
 
       rmx = mousePosition.x - posEyeR.x - rightEyeWidth / 2;
       rmy = mousePosition.y - posEyeR.y - rightEyeWidth / 2;
