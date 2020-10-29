@@ -28,16 +28,13 @@
 
   #impressum {
     padding: 10vw 10vw;
+  }
 
+  #impressum h2{
+    font-size: 15px;
   }
   
   #close-btn-impressum{
     position: relative;
-/*     padding: 5px;
-    right: 5vw;
-    border: none;
-    background-color: var(--contact-bg-color);
-    font-size: 20px;
-    transform: translateY(-4vw); */
   }
 }
