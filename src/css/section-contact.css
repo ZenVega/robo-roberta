@@ -13,6 +13,9 @@ section#contact{
   background-image: url("../images/section-contact/IMG_2708.jpeg");
   background-attachment: fixed;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-position: center;
 }
 
@@ -51,6 +54,7 @@ align-items: center;
   #parallax{
     height: 93vh;
     background-image: url("../images/section-contact/R+R_Kontakt_Mobile_3.jpg");
+    background-attachment: inherit;
   }
 
   #contact-links{
@@ -65,9 +69,4 @@ align-items: center;
     flex-direction: column;
     height: 110px;
   }
-}
-
-@media screen and (max-width: 400px){
-
-
 }

@@ -37,6 +37,13 @@ section#me{
   grid-area: 9 / 2 / 10/ 14;
 }
 
+#me-more-btn{
+  padding-left: 0px;
+  grid-area: 9 / 12 / 10/ 14;
+
+}
+
+
 
 @media screen and (max-width: 500px){
   section#me{
