@@ -1,11 +1,15 @@
 
 @font-face {
   font-family:"disketMonoRegular";
-  src: url("../../src/data/Disket-Mono-Regular.ttf")  format('truetype');
+  src: url("../../src/data/fonts/Disket_Mono/Disket-Mono-Regular.ttf")  format('truetype');
 }
 @font-face {
   font-family:"disketMonoBold";
-  src: url("../../src/data/Disket-Mono-Bold.ttf") format('truetype');
+  src: url("../../src/data/fonts/Disket_Mono/Disket-Mono-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family:"Roboro";
+  src: url("../../src/data/fonts/Roboto/Roboto-Regular.ttf") format('truetype');
 }
 
 :root {
